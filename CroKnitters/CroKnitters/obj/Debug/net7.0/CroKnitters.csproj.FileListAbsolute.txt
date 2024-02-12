@@ -28,3 +28,4 @@ C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\obj
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\obj\Debug\net7.0\CroKnitters.pdb
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\obj\Debug\net7.0\CroKnitters.genruntimeconfig.cache
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\obj\Debug\net7.0\ref\CroKnitters.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\obj\Debug\net7.0\CroKnitters.sourcelink.json
