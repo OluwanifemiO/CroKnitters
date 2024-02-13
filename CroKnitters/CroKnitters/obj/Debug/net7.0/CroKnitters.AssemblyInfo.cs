@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CroKnitters")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+059a2317da9a4bca5e4b18e6a9d7819da3fedc13")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CroKnitters")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CroKnitters")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
