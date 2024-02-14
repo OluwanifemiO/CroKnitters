@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IxCs7hDe31rq2HdRqaKZXNwUiRQrJCnTSArZZ9ZMuH4zBGt40ZDN0KCsFkO36gprikACvmjVnW6rpBIyGiNGng==",
+  "dgSpecHash": "Qf0dRDrK2EE7zin+qX86EZX6CQsFzgzZhRpPXsaA54r6ZAvDPiRHFDk7EdSrbe7go/g6S71UdLMof2aZQRlt3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\CroKnitters.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ogida\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\ogida\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\ogida\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\ogida\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
