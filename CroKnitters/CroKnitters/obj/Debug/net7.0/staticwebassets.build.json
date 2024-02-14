@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EKLHUAk5mxli4eUQkozovIsXQi5Zwo2l8yySQFrCmiU=",
+  "Hash": "BVC+nxtvozl/61HHqTz2Fk19nQePb7OClQTu4oMSks0=",
   "Source": "CroKnitters",
   "BasePath": "_content/CroKnitters",
   "Mode": "Default",
@@ -51,6 +51,40 @@
       "OriginalItemSpec": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CroKnitters.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\css\\input.css",
+      "SourceId": "CroKnitters",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\",
+      "BasePath": "_content/CroKnitters",
+      "RelativePath": "css/input.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\input.css"
+    },
+    {
+      "Identity": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\css\\output.css",
+      "SourceId": "CroKnitters",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\",
+      "BasePath": "_content/CroKnitters",
+      "RelativePath": "css/output.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\output.css"
+    },
+    {
       "Identity": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\css\\site.css",
       "SourceId": "CroKnitters",
       "SourceType": "Discovered",
@@ -83,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\background.jpg",
+      "SourceId": "CroKnitters",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\",
+      "BasePath": "_content/CroKnitters",
+      "RelativePath": "img/background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\background.jpg"
     },
     {
       "Identity": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\js\\site.js",

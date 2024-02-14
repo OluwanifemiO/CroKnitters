@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\CroKnitters.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\css\\input.css",
+      "PackagePath": "staticwebassets\\css\\input.css"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\css\\output.css",
+      "PackagePath": "staticwebassets\\css\\output.css"
+    },
+    {
       "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\background.jpg",
+      "PackagePath": "staticwebassets\\img\\background.jpg"
     },
     {
       "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\js\\site.js",
