@@ -1,0 +1,41 @@
+﻿@using CroKnitters.Entities;
+@model List<Comment>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="flex">
+    <div class="flex-1 rounded-lg border shadow-xl m-5 justify-center bg-white">
+        @* <table class="table table-striped" ">
+        <tr>
+        <th class="table-dark">
+        @Html.DisplayNameFor(model => model[0].EventTitle)
+        </th>
+        <th class="table-dark">
+        @Html.DisplayNameFor(model => model[0].Description)
+        </th>
+        <th class="table-dark"></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+        <td>
+        @Html.DisplayFor(modelItem => item.EventTitle)
+        </td>
+
+        <td>
+        @Html.DisplayFor(modelItem => item.Description)
+        </td>
+
+        <td>
+        @Html.ActionLink("Delete", "Delete", new { id = item.EventId }, new{@class="btn btn-danger"})
+        </td>
+        </tr>
+        }
+        </table> *@
+
+        <p>No records to display yet.</p>
+    </div>
+</div>
