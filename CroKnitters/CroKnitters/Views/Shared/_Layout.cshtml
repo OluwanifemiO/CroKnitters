@@ -5,32 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CroKnitters</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/output.css"/>
+    <link rel="stylesheet" href="~/css/output.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CroKnitters.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand">CroKnitters</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    @if (ViewContext.HttpContext.Request.Cookies.TryGetValue("role", out string role) && role != null)
+    {
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3 h-238">
+                <div class="container-fluid mt-5 pt-2">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <!--post button-->
+                                <div>
+                                    <button></button>
+                                </div>
+
+                                <div class="nav-item dropdown">
+                                    <a class="nav-link text-light hover:dropdownHover" href="#" id="accountDropdown" role="button">
+                                        Account
+                                    </a>
+
+                                    <div class="dropdown-content rounded">
+                                        @if (ViewContext.HttpContext.Request.Cookies.TryGetValue("role", out role) && role == "user")
+                                        {
+                                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index"><i class="bi bi-house-door"></i> Home</a>
+                                            <a class="dropdown-item mb-1" asp-controller="Profile" asp-action="Index"><i class="bi bi-person"></i> Profile</a>
+                                            <a class="dropdown-item mb-1" asp-controller="Pattern" asp-action="Index"><i class="bi bi-columns"></i> Patterns</a>
+                                            <a class="dropdown-item mb-1" asp-controller="Project" asp-action="Index"><i class="bi bi-folder2-open"></i> Projects</a>
+                                            <a class="dropdown-item mb-1" asp-controller="Messaging" asp-action="Index"><i class="bi bi-chat-dots"></i> Chats</a>
+                                            <a class="dropdown-item mb-1" asp-controller="Event" asp-action="Index"><i class="bi bi-calendar-event"></i> Events</a>
+                                            <a class="dropdown-item" asp-controller="Account" asp-action="Logout"><i class="bi bi-box-arrow-right"></i> Log Out</a>
+                                        }
+                                        else
+                                        {
+
+                                        }
+                                    </div>
+                                </div>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
+    }
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

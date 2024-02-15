@@ -17,6 +17,8 @@ builder.Services.AddSession(options =>
 var connStr = builder.Configuration.GetConnectionString("DBconnectionString");
 builder.Services.AddDbContext<CrochetAppDbContext>(options => options.UseSqlServer(connStr));
 
+builder.Services.AddAuthentication();
+
 
 var app = builder.Build();
 
@@ -29,9 +31,12 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

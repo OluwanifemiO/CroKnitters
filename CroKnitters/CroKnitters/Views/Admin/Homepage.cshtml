@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-5xl font-extrabold">
+    <span class=" text-black ">
+        Admin Dashboard
+    </span>
+</div>
+
+<div class="flex">
+    <div class="flex-1 rounded-lg border shadow-xl m-5 justify-center bg-white">
+
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link text-dark text-decoration-underline text-2xl" asp-area="" asp-controller="ManageComments" asp-action="Index">Manage Review</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark text-decoration-underline text-2xl" asp-area="" asp-controller="ManagePatterns" asp-action="Index">Manage Posts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark text-decoration-underline text-2xl" asp-area="" asp-controller="ManageEvents" asp-action="Index">Manage Comments</a>
+            </li>
+        </ul>
+    </div>
+</div>

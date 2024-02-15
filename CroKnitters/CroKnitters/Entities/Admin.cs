@@ -1,4 +1,6 @@
-﻿namespace CroKnitters.Entities
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace CroKnitters.Entities
 {
     public class Admin
     {

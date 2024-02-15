@@ -15,6 +15,8 @@ public partial class CrochetAppDbContext : DbContext
     {
     }
 
+    public DbSet<Admin> Admin { get; set; }
+
     public DbSet<City> Cities { get; set; }
 
     public DbSet<Comment> Comments { get; set; }
