@@ -16,16 +16,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Account/AdminLogin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZG1pbkxvZ2luLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Account/Reset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Account/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Admin/AdminLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Admin/Homepage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9tZXBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Home/Index.cshtml]
@@ -34,6 +42,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/ManageComments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlQ29tbWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/ManageEvents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlRXZlbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/ManagePatterns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUGF0dGVybnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Profile/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Shared/Error.cshtml]
