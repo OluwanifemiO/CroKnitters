@@ -26,12 +26,12 @@
                 <br/>
                 @if (TempData["error"] != null)
                 {
-                    <div>
+                    <p class="text-red">
                         @TempData["error"]
-                    </div>
+                    </p>
                 }
 
-                <div class="sm:mx-auto sm:w-full sm:max-w-sm p-5">
+                <div class="sm:mx-auto sm:w-full sm:max-w-sm p-4">
                     <form action="@Url.Action("UserLoginAccess", "Account")" method="post">
                         
                         <div>

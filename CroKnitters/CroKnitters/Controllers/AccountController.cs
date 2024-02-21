@@ -29,13 +29,19 @@ namespace CroKnitters.Controllers
         [HttpPost]
         public async Task<IActionResult> RegisterUser([Bind("UserId,FirstName,LastName,Username,Email,Password,Bio")] User user)
         {
+            //if there are errors
+            if (!ModelState.IsValid)
+            {
+                return View("SignUp", user);
+            }
+
             //if the user exists
             var existingUser = _dbContext.Users.Where(u => u.Username == user.Username).ToList();
             if (existingUser.Count != 0)
             {
 
                 ModelState.AddModelError(nameof(user.Username), "User name is already registered");
-                return View("Register", user);
+                return View("SignUp", user);
             }
 
             //otherwise add them to the db
