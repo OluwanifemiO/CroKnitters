@@ -397,13 +397,68 @@ public partial class CrochetAppDbContext : DbContext
                new User() { UserId = 4, FirstName = "Delilah", LastName = "Smith", Username = "Delilah123", Email = "Dsmith@example.com", Password = "!a123456", Bio = "Hello!", ImageId = 3 }
            );
 
-        ////seed into city
-        //modelBuilder.Entity<City>().HasData(
-        //       new City() { CityId = 1, CityName = "Toronto", ProvinceId = 1 },
-        //       new City() { CityId = 2, CityName = "Vancouver", ProvinceId = 2 },
-        //       new City() { CityId = 3, CityName = "Montreal", ProvinceId = 3 },
-        //       new City() { CityId = 4, CityName = "Calgary", ProvinceId = 4 }
-        //   );
+        //seed into city
+        modelBuilder.Entity<City>().HasData(
+               new City() { CityId = 1, CityName = "Calgary", ProvinceId = 1 },
+               new City() { CityId = 2, CityName = "Edmonton", ProvinceId = 1 },
+               new City() { CityId = 3, CityName = "Red Deer", ProvinceId = 1 },
+               new City() { CityId = 4, CityName = "Vancouver", ProvinceId = 2 },
+	           new City() { CityId = 5, CityName = "Surrey", ProvinceId = 2 },
+	           new City() { CityId = 6, CityName = "Victoria", ProvinceId = 2 },
+	           new City() { CityId = 7, CityName = "Burnaby", ProvinceId = 2 },
+	           new City() { CityId = 8, CityName = "Richmond", ProvinceId = 2 },
+	           new City() { CityId = 9, CityName = "Kelowna", ProvinceId = 2 },
+	           new City() { CityId = 10, CityName = "Abbotsford", ProvinceId = 2 },
+               new City() { CityId = 11, CityName = "Coquitlam", ProvinceId = 2 },
+               new City() { CityId = 12, CityName = "Saanich", ProvinceId = 2 },
+               new City() { CityId = 13, CityName = "White Rock", ProvinceId = 2 },
+               new City() { CityId = 14, CityName = "Delta", ProvinceId = 2 },
+               new City() { CityId = 15, CityName = "Nanaimo", ProvinceId = 2 },
+               new City() { CityId = 16, CityName = "Winnipeg", ProvinceId = 3 },
+               new City() { CityId = 17, CityName = "Moncton", ProvinceId = 4 },
+               new City() { CityId = 18, CityName = "St. John's", ProvinceId = 5 },
+               new City() { CityId = 19, CityName = "Halifax", ProvinceId = 6 },
+               new City() { CityId = 20, CityName = "Toronto", ProvinceId = 7 },
+               new City() { CityId = 21, CityName = "Ottawa", ProvinceId = 7 },
+               new City() { CityId = 22, CityName = "Hamilton", ProvinceId = 7 },
+               new City() { CityId = 23, CityName = "Mississauga", ProvinceId = 7 },
+               new City() { CityId = 24, CityName = "Brampton", ProvinceId = 7 },
+               new City() { CityId = 25, CityName = "Kitchener", ProvinceId = 7 },
+               new City() { CityId = 26, CityName = "London", ProvinceId = 7 },
+               new City() { CityId = 27, CityName = "Markham", ProvinceId = 7 },
+               new City() { CityId = 28, CityName = "Oshawa", ProvinceId = 7 },
+               new City() { CityId = 29, CityName = "Vaughan", ProvinceId = 7 },
+               new City() { CityId = 30, CityName = "Windsor", ProvinceId = 7 },
+               new City() { CityId = 31, CityName = "St. Catharines", ProvinceId = 7 },
+               new City() { CityId = 32, CityName = "Oakville", ProvinceId = 7 },
+               new City() { CityId = 33, CityName = "Richmond Hill", ProvinceId = 7 },
+               new City() { CityId = 34, CityName = "Burlington", ProvinceId = 7 },
+               new City() { CityId = 35, CityName = "Sudbury", ProvinceId = 7 },
+               new City() { CityId = 36, CityName = "Barrie", ProvinceId = 7 },
+               new City() { CityId = 37, CityName = "Guelph", ProvinceId = 7 },
+               new City() { CityId = 38, CityName = "Whitby", ProvinceId = 7 },
+               new City() { CityId = 39, CityName = "Cambridge", ProvinceId = 7 },
+               new City() { CityId = 40, CityName = "Milton", ProvinceId = 7 },
+               new City() { CityId = 41, CityName = "Ajax", ProvinceId = 7 },
+               new City() { CityId = 42, CityName = "Waterloo", ProvinceId = 7 },
+               new City() { CityId = 43, CityName = "Thunder Bay", ProvinceId = 7 },
+               new City() { CityId = 44, CityName = "Brantford", ProvinceId = 7 },
+               new City() { CityId = 45, CityName = "Chatham", ProvinceId = 7 },
+               new City() { CityId = 46, CityName = "Clarington", ProvinceId = 7 },
+               new City() { CityId = 47, CityName = "Montréal", ProvinceId = 9 },
+               new City() { CityId = 48, CityName = "Quebec City", ProvinceId = 9 },
+               new City() { CityId = 49, CityName = "Laval", ProvinceId = 9 },
+               new City() { CityId = 50, CityName = "Gatineau", ProvinceId = 9 },
+               new City() { CityId = 51, CityName = "Longueuil", ProvinceId = 9 },
+               new City() { CityId = 52, CityName = "Sherbrooke", ProvinceId = 9 },
+               new City() { CityId = 53, CityName = "Lévis", ProvinceId = 9 },
+               new City() { CityId = 54, CityName = "Saguenay", ProvinceId = 9 },
+               new City() { CityId = 55, CityName = "Trois-Rivières", ProvinceId = 9 },
+               new City() { CityId = 56, CityName = "Terrebonne", ProvinceId = 9 },
+               new City() { CityId = 57, CityName = "Saint-Jérôme", ProvinceId = 9 },
+               new City() { CityId = 58, CityName = "Saskatoon", ProvinceId = 10 },
+               new City() { CityId = 59, CityName = "Regina", ProvinceId = 10 }
+           );
 
         //seed into province
         modelBuilder.Entity<Province>().HasData(
@@ -417,7 +472,7 @@ public partial class CrochetAppDbContext : DbContext
                new Province() { ProvinceId = 8, ProvinceName = "Prince Edward Island" },
                new Province() { ProvinceId = 9, ProvinceName = "Quebec" },
                new Province() { ProvinceId = 10, ProvinceName = "Saskatchewan" }
-           );
+       );
 
         //seed into image
         modelBuilder.Entity<Image>().HasData(
@@ -426,6 +481,7 @@ public partial class CrochetAppDbContext : DbContext
                new Image() { ImageId = 3, ImageSrc = "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png" },
                new Image() { ImageId = 4, ImageSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQV1_mGYXjq3eWha-wQIRkn6ulW9X6Ws-ztw&usqp=CAU" }
            );
+
     }
 
 }
