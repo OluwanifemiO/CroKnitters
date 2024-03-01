@@ -36,6 +36,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSG9tZXBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Chats/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Friend/AddFriend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJpZW5kXEFkZEZyaWVuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Friend/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJpZW5kXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -56,12 +68,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUGF0dGVybnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Pattern/CreatePattern.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0dGVyblxDcmVhdGVQYXR0ZXJuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Pattern/EditPattern.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0dGVyblxFZGl0UGF0dGVybi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Pattern/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0dGVyblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Preference/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZmVyZW5jZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Profile/EditProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Profile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Project/CreateProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxDcmVhdGVQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Project/EditProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxFZGl0UHJvamVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Project/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ogida/OneDrive/Documents/GitHub/CroKnitters/CroKnitters/CroKnitters/Views/Shared/Error.cshtml]

@@ -1,0 +1,58 @@
+﻿@using CroKnitters.Entities;
+@model Project
+
+@{
+    ViewData["Title"] = "Edit Project";
+}
+
+
+<div class=" rounded-lg border text-center shadow-xl m-5 justify-content-start bg-white">
+    <div class="p-5">
+        <h2 class="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"> Edit Project</h2>
+        <hr />
+
+        <div class="pt-2 pb-2">
+            <form asp-action="EditProject" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="ProjectId" name="ProjectId" />
+
+                <!--pattern details: images, id, name, description, creation date, stitch type, stitch count-->
+                <div class="projectImage mb-3">
+                    <label for="ProjectImages">Upload images for your patterns:</label>
+                    <input type="file" id="ProjectImages" name="ProjectImages" accept="image/*">
+                    <button type="submit" class="btn">Upload</button>
+                </div>
+
+
+                <div class="mb-3 form-group">
+                    <b> <label asp-for="ProjectName" class="control-label">Project Name</label></b>
+                    <input asp-for="ProjectName" class="form-control" />
+                    <span asp-validation-for="ProjectName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 form-group">
+                    <b> <label asp-for="Description" class="control-label"> Project Description</label></b>
+                    <textarea asp-for="Description" class="form-control"> </textarea>
+                </div>
+
+                <div class="mb-3 form-group">
+                    <b> <label class="control-label">Creation Date</label></b>
+                    <input asp-for="CreationDate" type="datetime" class="form-control" readonly="readonly" />
+                </div>
+
+                <div class="mb-3 form-group">
+                    <b> <label id="Platform" name="Platform" class="control-label"> Status</label></b>
+                    <select id="Status" name="Status" class="form-control">
+                        <option value="In-Progress">In-Progress</option>
+                        <option value="Complete">Complete</option>
+                    </select>
+                </div>
+
+                <div class="mb-8 form-group">
+                    <input type="submit" value="Save" class="btn rounded-md bg-indigo-600 mt-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

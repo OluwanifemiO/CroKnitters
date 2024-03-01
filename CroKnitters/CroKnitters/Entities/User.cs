@@ -49,8 +49,21 @@ namespace CroKnitters.Entities
 
         public ICollection<Project> Projects { get; set; } = new List<Project>();
 
+        public ICollection<Message> Messages { get; set; } = new List<Message>();
+
         public ICollection<UserPattern> UserPatterns { get; set; } = new List<UserPattern>();
 
         public ICollection<UserProject> UserProjects { get; set; } = new List<UserProject>();
+
+        public ICollection<FriendsList> FriendsListFriends { get; set; } = new List<FriendsList>();
+
+        public ICollection<FriendsList> FriendsListUsers { get; set; } = new List<FriendsList>();
+
+        public ICollection<GroupUser> GroupUsers { get; set; } = new List<GroupUser>();
+
+        public ICollection<PrivateChat> PrivateChatRecievers { get; set; } = new List<PrivateChat>();
+
+        public ICollection<PrivateChat> PrivateChatSenders { get; set; } = new List<PrivateChat>();
+
     }
 }
