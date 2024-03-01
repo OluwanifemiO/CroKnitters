@@ -1,0 +1,61 @@
+﻿@using CroKnitters.Entities;
+@model Preference
+@{
+    ViewData["Title"] = "User Preferences";
+}
+
+<div class="justify-content-center rounded-lg border w-auto shadow-xl m-5 bg-white">
+
+    <div class="text-5xl font-extrabold text-center">
+        <span>
+            Manage your Preferences
+        </span>
+    </div>
+
+    <div class="p-5">
+       
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div id="successMessage" class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+        <form asp-controller="Preference" asp-action="EditPreference" method="post">
+            @if (TempData["error"] != null)
+            {
+                <div>
+                    @TempData["error"]
+                </div>
+            }
+
+            <input type="hidden" asp-for="PreferenceId" />
+
+            <div class="mb-3 form-group">
+                <b> <label id="Platform" name="Platform" class="control-label"> App Theme</label></b>
+                <select id="Platform" name="Platform" class="form-control">
+                    <option  value="N/A">N/A</option>
+                    <option  value="Light">Light</option>
+                    <option  value="Dark">Dark</option>
+                </select>
+            </div>
+
+            <div class="mb-3 form-group">
+                <b> <label id="Language" name="Language" class="control-label">Language Preference</label></b>
+                <select id="Language" name="Language" class="form-control">
+                    <option  value="N/A">N/A</option>
+                    <option  value="English">English</option>
+                    <option  value="Spanish">Spanish</option>
+                    <option  value="French">French</option>
+                    <option  value="German">German</option>
+                </select>
+            </div>
+
+            <div class="mb-3 form-group">
+                <input type="submit" value="Save" class=" rounded-md bg-indigo-600 mt-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2" />
+                <a asp-controller="Home" asp-action="Index" class=" rounded-md bg-indigo-600 mt-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2">Back to Home</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
