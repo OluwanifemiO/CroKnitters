@@ -97,6 +97,362 @@ namespace CroKnitters.Migrations
                     b.HasIndex("ProvinceId");
 
                     b.ToTable("Cities");
+
+                    b.HasData(
+                        new
+                        {
+                            CityId = 1,
+                            CityName = "Calgary",
+                            ProvinceId = 1
+                        },
+                        new
+                        {
+                            CityId = 2,
+                            CityName = "Edmonton",
+                            ProvinceId = 1
+                        },
+                        new
+                        {
+                            CityId = 3,
+                            CityName = "Red Deer",
+                            ProvinceId = 1
+                        },
+                        new
+                        {
+                            CityId = 4,
+                            CityName = "Vancouver",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 5,
+                            CityName = "Surrey",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 6,
+                            CityName = "Victoria",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 7,
+                            CityName = "Burnaby",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 8,
+                            CityName = "Richmond",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 9,
+                            CityName = "Kelowna",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 10,
+                            CityName = "Abbotsford",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 11,
+                            CityName = "Coquitlam",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 12,
+                            CityName = "Saanich",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 13,
+                            CityName = "White Rock",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 14,
+                            CityName = "Delta",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 15,
+                            CityName = "Nanaimo",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 16,
+                            CityName = "Winnipeg",
+                            ProvinceId = 3
+                        },
+                        new
+                        {
+                            CityId = 17,
+                            CityName = "Moncton",
+                            ProvinceId = 4
+                        },
+                        new
+                        {
+                            CityId = 18,
+                            CityName = "St. John's",
+                            ProvinceId = 5
+                        },
+                        new
+                        {
+                            CityId = 19,
+                            CityName = "Halifax",
+                            ProvinceId = 6
+                        },
+                        new
+                        {
+                            CityId = 20,
+                            CityName = "Toronto",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 21,
+                            CityName = "Ottawa",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 22,
+                            CityName = "Hamilton",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 23,
+                            CityName = "Mississauga",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 24,
+                            CityName = "Brampton",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 25,
+                            CityName = "Kitchener",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 26,
+                            CityName = "London",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 27,
+                            CityName = "Markham",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 28,
+                            CityName = "Oshawa",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 29,
+                            CityName = "Vaughan",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 30,
+                            CityName = "Windsor",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 31,
+                            CityName = "St. Catharines",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 32,
+                            CityName = "Oakville",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 33,
+                            CityName = "Richmond Hill",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 34,
+                            CityName = "Burlington",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 35,
+                            CityName = "Sudbury",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 36,
+                            CityName = "Barrie",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 37,
+                            CityName = "Guelph",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 38,
+                            CityName = "Whitby",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 39,
+                            CityName = "Cambridge",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 40,
+                            CityName = "Milton",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 41,
+                            CityName = "Ajax",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 42,
+                            CityName = "Waterloo",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 43,
+                            CityName = "Thunder Bay",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 44,
+                            CityName = "Brantford",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 45,
+                            CityName = "Chatham",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 46,
+                            CityName = "Clarington",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 47,
+                            CityName = "Montréal",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 48,
+                            CityName = "Quebec City",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 49,
+                            CityName = "Laval",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 50,
+                            CityName = "Gatineau",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 51,
+                            CityName = "Longueuil",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 52,
+                            CityName = "Sherbrooke",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 53,
+                            CityName = "Lévis",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 54,
+                            CityName = "Saguenay",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 55,
+                            CityName = "Trois-Rivières",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 56,
+                            CityName = "Terrebonne",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 57,
+                            CityName = "Saint-Jérôme",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 58,
+                            CityName = "Saskatoon",
+                            ProvinceId = 10
+                        },
+                        new
+                        {
+                            CityId = 59,
+                            CityName = "Regina",
+                            ProvinceId = 10
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Comment", b =>
@@ -187,6 +543,118 @@ namespace CroKnitters.Migrations
                     b.ToTable("EventUsers");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.FriendsList", b =>
+                {
+                    b.Property<int>("ListId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ListId"));
+
+                    b.Property<int>("FriendId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ListId")
+                        .HasName("PK__FriendsL__E3832805B148DDC9");
+
+                    b.HasIndex("FriendId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("FriendsList", (string)null);
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.Group", b =>
+                {
+                    b.Property<int>("GroupId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GroupId"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<string>("GroupName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("GroupId")
+                        .HasName("PK__Groups__149AF36A0C281B44");
+
+                    b.ToTable("Groups");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.GroupChat", b =>
+                {
+                    b.Property<int>("GChatId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("GChatId");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GChatId"));
+
+                    b.Property<int?>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MessageId")
+                        .HasColumnType("int");
+
+                    b.HasKey("GChatId")
+                        .HasName("PK__GroupCha__75C801E807CEC318");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("MessageId");
+
+                    b.ToTable("GroupChat", (string)null);
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.GroupUser", b =>
+                {
+                    b.Property<int>("GroupUserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GroupUserId"));
+
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(25)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(25)")
+                        .HasDefaultValueSql("('Member')");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("GroupUserId")
+                        .HasName("PK__GroupUse__37F70716E0C22569");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("GroupUsers");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Image", b =>
                 {
                     b.Property<int>("ImageId")
@@ -247,6 +715,36 @@ namespace CroKnitters.Migrations
                         .HasName("PK__Language__B93855ABA45758AD");
 
                     b.ToTable("Languages");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.Message", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MessageId"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MessageId")
+                        .HasName("PK__Messages__C87C0C9C167A84C6");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Pattern", b =>
@@ -334,6 +832,30 @@ namespace CroKnitters.Migrations
                     b.ToTable("PatternComments");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.PatternImage", b =>
+                {
+                    b.Property<int>("PatImId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PatImId"));
+
+                    b.Property<int>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PatternId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PatImId")
+                        .HasName("PK__PatternI__469D527DA79D41C7");
+
+                    b.HasIndex("ImageId");
+
+                    b.HasIndex("PatternId");
+
+                    b.ToTable("PatternImage");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.PatternTag", b =>
                 {
                     b.Property<int>("PatTagId")
@@ -385,6 +907,41 @@ namespace CroKnitters.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Preferences");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.PrivateChat", b =>
+                {
+                    b.Property<int>("PChatId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("PChatId");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PChatId"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<int>("MessageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecieverId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PChatId")
+                        .HasName("PK__PrivateC__752CDBDC8FE2125C");
+
+                    b.HasIndex("MessageId");
+
+                    b.HasIndex("RecieverId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("PrivateChat", (string)null);
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Project", b =>
@@ -469,6 +1026,30 @@ namespace CroKnitters.Migrations
                     b.HasIndex("ProjectId");
 
                     b.ToTable("ProjectComments");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.ProjectImage", b =>
+                {
+                    b.Property<int>("ProImId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProImId"));
+
+                    b.Property<int>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProImId")
+                        .HasName("PK__ProjectI__05A6BB15FBD6324F");
+
+                    b.HasIndex("ImageId");
+
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("ProjectImages");
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.ProjectPattern", b =>
@@ -687,6 +1268,9 @@ namespace CroKnitters.Migrations
 
                     b.HasIndex("ImageId");
 
+                    b.HasIndex("Username")
+                        .IsUnique();
+
                     b.ToTable("Users");
 
                     b.HasData(
@@ -835,6 +1419,72 @@ namespace CroKnitters.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.FriendsList", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.User", "Friend")
+                        .WithMany("FriendsListFriends")
+                        .HasForeignKey("FriendId")
+                        .IsRequired()
+                        .HasConstraintName("FK__FriendsLi__Frien__3B40CD36");
+
+                    b.HasOne("CroKnitters.Entities.User", "User")
+                        .WithMany("FriendsListUsers")
+                        .HasForeignKey("UserId")
+                        .IsRequired()
+                        .HasConstraintName("FK__FriendsLi__UserI__3A4CA8FD");
+
+                    b.Navigation("Friend");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.GroupChat", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Group", "Group")
+                        .WithMany("GroupChats")
+                        .HasForeignKey("GroupId")
+                        .HasConstraintName("FK__GroupChat__Group__31B762FC");
+
+                    b.HasOne("CroKnitters.Entities.Message", "Message")
+                        .WithMany("GroupChats")
+                        .HasForeignKey("MessageId")
+                        .HasConstraintName("FK__GroupChat__Messa__30C33EC3");
+
+                    b.Navigation("Group");
+
+                    b.Navigation("Message");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.GroupUser", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Group", "Group")
+                        .WithMany("GroupUsers")
+                        .HasForeignKey("GroupId")
+                        .IsRequired()
+                        .HasConstraintName("FK__GroupUser__Group__40058253");
+
+                    b.HasOne("CroKnitters.Entities.User", "User")
+                        .WithMany("GroupUsers")
+                        .HasForeignKey("UserId")
+                        .IsRequired()
+                        .HasConstraintName("FK__GroupUser__UserI__3E1D39E1");
+
+                    b.Navigation("Group");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.Message", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.User", "Sender")
+                        .WithMany("Messages")
+                        .HasForeignKey("SenderId")
+                        .IsRequired()
+                        .HasConstraintName("FK__Messages__Sender__2CF2ADDF");
+
+                    b.Navigation("Sender");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Pattern", b =>
                 {
                     b.HasOne("CroKnitters.Entities.Admin", "Admin")
@@ -843,10 +1493,9 @@ namespace CroKnitters.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CroKnitters.Entities.Image", "Image")
+                    b.HasOne("CroKnitters.Entities.Image", null)
                         .WithMany("Patterns")
-                        .HasForeignKey("ImageId")
-                        .HasConstraintName("FK__Patterns__ImageI__3F466844");
+                        .HasForeignKey("ImageId");
 
                     b.HasOne("CroKnitters.Entities.User", "Owner")
                         .WithMany("Patterns")
@@ -855,8 +1504,6 @@ namespace CroKnitters.Migrations
                         .HasConstraintName("FK__Patterns__OwnerI__3E52440B");
 
                     b.Navigation("Admin");
-
-                    b.Navigation("Image");
 
                     b.Navigation("Owner");
                 });
@@ -884,6 +1531,25 @@ namespace CroKnitters.Migrations
                     b.Navigation("Admin");
 
                     b.Navigation("Comment");
+
+                    b.Navigation("Pattern");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.PatternImage", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Image", "Image")
+                        .WithMany("PatternImages")
+                        .HasForeignKey("ImageId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PatternIm__Image__236943A5");
+
+                    b.HasOne("CroKnitters.Entities.Pattern", "Pattern")
+                        .WithMany("PatternImages")
+                        .HasForeignKey("PatternId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PatternIm__Patte__22751F6C");
+
+                    b.Navigation("Image");
 
                     b.Navigation("Pattern");
                 });
@@ -934,6 +1600,33 @@ namespace CroKnitters.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.PrivateChat", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Message", "Message")
+                        .WithMany("PrivateChats")
+                        .HasForeignKey("MessageId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PrivateCh__Messa__367C1819");
+
+                    b.HasOne("CroKnitters.Entities.User", "Reciever")
+                        .WithMany("PrivateChatRecievers")
+                        .HasForeignKey("RecieverId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PrivateCh__Recie__3587F3E0");
+
+                    b.HasOne("CroKnitters.Entities.User", "Sender")
+                        .WithMany("PrivateChatSenders")
+                        .HasForeignKey("SenderId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PrivateCh__Sende__3493CFA7");
+
+                    b.Navigation("Message");
+
+                    b.Navigation("Reciever");
+
+                    b.Navigation("Sender");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Project", b =>
                 {
                     b.HasOne("CroKnitters.Entities.Admin", "Admin")
@@ -942,10 +1635,9 @@ namespace CroKnitters.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CroKnitters.Entities.Image", "Image")
+                    b.HasOne("CroKnitters.Entities.Image", null)
                         .WithMany("Projects")
-                        .HasForeignKey("ImageId")
-                        .HasConstraintName("FK__Projects__ImageI__45F365D3");
+                        .HasForeignKey("ImageId");
 
                     b.HasOne("CroKnitters.Entities.User", "Owner")
                         .WithMany("Projects")
@@ -954,8 +1646,6 @@ namespace CroKnitters.Migrations
                         .HasConstraintName("FK__Projects__OwnerI__44FF419A");
 
                     b.Navigation("Admin");
-
-                    b.Navigation("Image");
 
                     b.Navigation("Owner");
                 });
@@ -983,6 +1673,25 @@ namespace CroKnitters.Migrations
                     b.Navigation("Admin");
 
                     b.Navigation("Comment");
+
+                    b.Navigation("Project");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.ProjectImage", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Image", "Image")
+                        .WithMany("ProjectImages")
+                        .HasForeignKey("ImageId")
+                        .IsRequired()
+                        .HasConstraintName("FK__ProjectIm__Image__1F98B2C1");
+
+                    b.HasOne("CroKnitters.Entities.Project", "Project")
+                        .WithMany("ProjectImages")
+                        .HasForeignKey("ProjectId")
+                        .IsRequired()
+                        .HasConstraintName("FK__ProjectIm__Proje__1EA48E88");
+
+                    b.Navigation("Image");
 
                     b.Navigation("Project");
                 });
@@ -1097,9 +1806,20 @@ namespace CroKnitters.Migrations
                     b.Navigation("EventUsers");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.Group", b =>
+                {
+                    b.Navigation("GroupChats");
+
+                    b.Navigation("GroupUsers");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Image", b =>
                 {
+                    b.Navigation("PatternImages");
+
                     b.Navigation("Patterns");
+
+                    b.Navigation("ProjectImages");
 
                     b.Navigation("Projects");
 
@@ -1111,9 +1831,18 @@ namespace CroKnitters.Migrations
                     b.Navigation("Preferences");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.Message", b =>
+                {
+                    b.Navigation("GroupChats");
+
+                    b.Navigation("PrivateChats");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Pattern", b =>
                 {
                     b.Navigation("PatternComments");
+
+                    b.Navigation("PatternImages");
 
                     b.Navigation("PatternTags");
 
@@ -1125,6 +1854,8 @@ namespace CroKnitters.Migrations
             modelBuilder.Entity("CroKnitters.Entities.Project", b =>
                 {
                     b.Navigation("ProjectComments");
+
+                    b.Navigation("ProjectImages");
 
                     b.Navigation("ProjectPatterns");
 
@@ -1158,9 +1889,21 @@ namespace CroKnitters.Migrations
 
                     b.Navigation("Events");
 
+                    b.Navigation("FriendsListFriends");
+
+                    b.Navigation("FriendsListUsers");
+
+                    b.Navigation("GroupUsers");
+
+                    b.Navigation("Messages");
+
                     b.Navigation("Patterns");
 
                     b.Navigation("Preferences");
+
+                    b.Navigation("PrivateChatRecievers");
+
+                    b.Navigation("PrivateChatSenders");
 
                     b.Navigation("Projects");
 

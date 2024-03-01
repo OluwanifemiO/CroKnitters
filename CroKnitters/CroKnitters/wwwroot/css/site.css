@@ -57,3 +57,67 @@ nav{
     width:800px;
     margin-left:300px;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .grid-item h3 {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .grid-item p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: #666;
+    }
+    .chats-list{
+        width:200px;
+    }
+
+    .messages{
+        width: 1000px;
+    }
+
+.rounded-full {
+    border-radius: 9999px;
+}
+.h-12 {
+    height: 3rem;
+}
+.w-12 {
+    width: 3rem;
+}
+.gap-x-4 {
+    column-gap: 1rem;
+}
+
+.flex-auto {
+    flex: 1 1 auto;
+}
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.font-semibold {
+    font-weight: 600;
+}
+

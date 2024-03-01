@@ -57,6 +57,21 @@ public partial class CrochetAppDbContext : DbContext
 
     public DbSet<UserProject> UserProjects { get; set; }
 
+    //new
+    public DbSet<ProjectImage> ProjectImages { get; set; }
+
+    public DbSet<Group> Groups { get; set; }
+
+    public DbSet<Message> Messages { get; set; }
+
+    public DbSet<GroupChat> GroupChat { get; set; }
+
+    public DbSet<PrivateChat> PrivateChat { get; set; }
+
+    public DbSet<FriendsList> FriendsList { get; set; }
+
+    public DbSet<GroupUser> GroupUsers { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -122,6 +137,75 @@ public partial class CrochetAppDbContext : DbContext
                 .HasConstraintName("FK__EventUser__UserI__693CA210");
         });
 
+        modelBuilder.Entity<FriendsList>(entity =>
+        {
+            entity.HasKey(e => e.ListId).HasName("PK__FriendsL__E3832805B148DDC9");
+
+            entity.ToTable("FriendsList");
+
+            entity.HasOne(d => d.Friend).WithMany(p => p.FriendsListFriends)
+                .HasForeignKey(d => d.FriendId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__FriendsLi__Frien__3B40CD36");
+
+            entity.HasOne(d => d.User).WithMany(p => p.FriendsListUsers)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__FriendsLi__UserI__3A4CA8FD");
+        });
+
+        modelBuilder.Entity<Group>(entity =>
+        {
+            entity.HasKey(e => e.GroupId).HasName("PK__Groups__149AF36A0C281B44");
+
+            entity.Property(e => e.CreationDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Description)
+                .HasMaxLength(500)
+                .IsUnicode(false);
+            entity.Property(e => e.GroupName)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<GroupChat>(entity =>
+        {
+            entity.HasKey(e => e.GChatId).HasName("PK__GroupCha__75C801E807CEC318");
+
+            entity.ToTable("GroupChat");
+
+            entity.Property(e => e.GChatId).HasColumnName("GChatId");
+
+            entity.HasOne(d => d.Group).WithMany(p => p.GroupChats)
+                .HasForeignKey(d => d.GroupId)
+                .HasConstraintName("FK__GroupChat__Group__31B762FC");
+
+            entity.HasOne(d => d.Message).WithMany(p => p.GroupChats)
+                .HasForeignKey(d => d.MessageId)
+                .HasConstraintName("FK__GroupChat__Messa__30C33EC3");
+        });
+
+        modelBuilder.Entity<GroupUser>(entity =>
+        {
+            entity.HasKey(e => e.GroupUserId).HasName("PK__GroupUse__37F70716E0C22569");
+
+            entity.Property(e => e.Role)
+                .HasMaxLength(25)
+                .IsUnicode(false)
+                .HasDefaultValueSql("('Member')");
+
+            entity.HasOne(d => d.Group).WithMany(p => p.GroupUsers)
+                .HasForeignKey(d => d.GroupId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__GroupUser__Group__40058253");
+
+            entity.HasOne(d => d.User).WithMany(p => p.GroupUsers)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__GroupUser__UserI__3E1D39E1");
+        });
+
         modelBuilder.Entity<Image>(entity =>
         {
             entity.HasKey(e => e.ImageId).HasName("PK__Images__7516F70CC8F1B07F");
@@ -140,6 +224,23 @@ public partial class CrochetAppDbContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<Message>(entity =>
+        {
+            entity.HasKey(e => e.MessageId).HasName("PK__Messages__C87C0C9C167A84C6");
+
+            entity.Property(e => e.Content)
+                .HasMaxLength(500)
+                .IsUnicode(false);
+            entity.Property(e => e.CreationDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.HasOne(d => d.Sender).WithMany(p => p.Messages)
+                .HasForeignKey(d => d.SenderId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Messages__Sender__2CF2ADDF");
+        });
+
         modelBuilder.Entity<Pattern>(entity =>
         {
             entity.HasKey(e => e.PatternId).HasName("PK__Patterns__0A631B521FCBD794");
@@ -156,10 +257,6 @@ public partial class CrochetAppDbContext : DbContext
             entity.Property(e => e.StitchType)
                 .HasMaxLength(250)
                 .IsUnicode(false);
-
-            entity.HasOne(d => d.Image).WithMany(p => p.Patterns)
-                .HasForeignKey(d => d.ImageId)
-                .HasConstraintName("FK__Patterns__ImageI__3F466844");
 
             entity.HasOne(d => d.Owner).WithMany(p => p.Patterns)
                 .HasForeignKey(d => d.OwnerId)
@@ -180,6 +277,21 @@ public partial class CrochetAppDbContext : DbContext
                 .HasForeignKey(d => d.PatternId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__PatternCo__Patte__6477ECF3");
+        });
+
+        modelBuilder.Entity<PatternImage>(entity =>
+        {
+            entity.HasKey(e => e.PatImId).HasName("PK__PatternI__469D527DA79D41C7");
+
+            entity.HasOne(d => d.Image).WithMany(p => p.PatternImages)
+                .HasForeignKey(d => d.ImageId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__PatternIm__Image__236943A5");
+
+            entity.HasOne(d => d.Pattern).WithMany(p => p.PatternImages)
+                .HasForeignKey(d => d.PatternId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__PatternIm__Patte__22751F6C");
         });
 
         modelBuilder.Entity<PatternTag>(entity =>
@@ -217,6 +329,33 @@ public partial class CrochetAppDbContext : DbContext
                 .HasConstraintName("FK__Preferenc__UserI__37A5467C");
         });
 
+        modelBuilder.Entity<PrivateChat>(entity =>
+        {
+            entity.HasKey(e => e.PChatId).HasName("PK__PrivateC__752CDBDC8FE2125C");
+
+            entity.ToTable("PrivateChat");
+
+            entity.Property(e => e.PChatId).HasColumnName("PChatId");
+            entity.Property(e => e.CreationDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+
+            entity.HasOne(d => d.Message).WithMany(p => p.PrivateChats)
+                .HasForeignKey(d => d.MessageId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__PrivateCh__Messa__367C1819");
+
+            entity.HasOne(d => d.Reciever).WithMany(p => p.PrivateChatRecievers)
+                .HasForeignKey(d => d.RecieverId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__PrivateCh__Recie__3587F3E0");
+
+            entity.HasOne(d => d.Sender).WithMany(p => p.PrivateChatSenders)
+                .HasForeignKey(d => d.SenderId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__PrivateCh__Sende__3493CFA7");
+        });
+
         modelBuilder.Entity<Project>(entity =>
         {
             entity.HasKey(e => e.ProjectId).HasName("PK__Projects__761ABEF001154132");
@@ -234,10 +373,6 @@ public partial class CrochetAppDbContext : DbContext
                 .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasDefaultValueSql("('In-Progress')");
-
-            entity.HasOne(d => d.Image).WithMany(p => p.Projects)
-                .HasForeignKey(d => d.ImageId)
-                .HasConstraintName("FK__Projects__ImageI__45F365D3");
 
             entity.HasOne(d => d.Owner).WithMany(p => p.Projects)
                 .HasForeignKey(d => d.OwnerId)
@@ -258,6 +393,21 @@ public partial class CrochetAppDbContext : DbContext
                 .HasForeignKey(d => d.ProjectId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__ProjectCo__Proje__60A75C0F");
+        });
+
+        modelBuilder.Entity<ProjectImage>(entity =>
+        {
+            entity.HasKey(e => e.ProImId).HasName("PK__ProjectI__05A6BB15FBD6324F");
+
+            entity.HasOne(d => d.Image).WithMany(p => p.ProjectImages)
+                .HasForeignKey(d => d.ImageId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ProjectIm__Image__1F98B2C1");
+
+            entity.HasOne(d => d.Project).WithMany(p => p.ProjectImages)
+                .HasForeignKey(d => d.ProjectId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ProjectIm__Proje__1EA48E88");
         });
 
         modelBuilder.Entity<ProjectPattern>(entity =>
@@ -378,6 +528,7 @@ public partial class CrochetAppDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__UserProje__UserI__5165187F");
         });
+
 
         //seed data into the database:
         //iteration 1 data
