@@ -1,9 +1,12 @@
-﻿namespace CroKnitters.Entities
+﻿using CroKnitters.Models;
+
+namespace CroKnitters.Entities
 {
     public class Feed
     {
-        public ICollection<Pattern> Patterns { get; set; } = new List<Pattern>();
+        public ICollection<PatternSummaryViewModel> Patterns { get; set; } = new List<PatternSummaryViewModel>();
 
-        public ICollection<Project> Projects { get; set; } = new List<Project>();
+        public ICollection<ProjectSummaryViewModel> Projects { get; set; } = new List<ProjectSummaryViewModel>();
+
     }
 }

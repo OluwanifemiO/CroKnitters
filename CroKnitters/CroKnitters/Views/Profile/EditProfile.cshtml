@@ -1,5 +1,4 @@
-﻿ @using CroKnitters.Entities;
-@model User
+﻿@model UserProfileViewModel
 
 @{
     ViewData["Title"] = " Edit User Profile";
@@ -14,11 +13,15 @@
         <div class="pt-2 pb-2">
             <form asp-action="EditProfile" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="UserId" />
+                <input type="hidden" asp-for="@Model.user.UserId" />
+                <input type="hidden" asp-for="@Model.user.Password" value="@Model.user.Password" />
 
 
                 <div class="profilePicture">
-                    <i class="bi bi-person-circle"></i>
+                    <div class="justify-center text-md-center profilePicture rounded-full ">
+                        <!--profile pic-->
+                        <img src="@("~/img/profile/"+Model.UserImageSrc)" asp-append-version="true" alt="User Profile image" class="rounded-full" />
+                    </div>
 
                     <!--Change profile pic-->
                         <label for="profilePicture">Choose a profile picture:</label>
@@ -28,31 +31,31 @@
 
 
                 <div class="mb-8 form-group">
-                    <b> <label asp-for="Email" class="control-label"></label></b>
-                    <input asp-for="Email" class="form-control" readonly="readonly" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <b> <label asp-for="@Model.user.Email" class="control-label"></label></b>
+                    <input asp-for="@Model.user.Email" class="form-control" readonly="readonly" />
+                    <span asp-validation-for="@Model.user.Email" class="text-danger"></span>
                 </div>
 
                 <div class="mb-8 form-group">
-                    <b> <label asp-for="Username" class="control-label"></label></b>
-                    <input asp-for="Username" class="form-control" />
-                    <span asp-validation-for="Username" class="text-danger"></span>
+                    <b> <label asp-for="@Model.user.Username" class="control-label"></label></b>
+                    <input asp-for="@Model.user.Username" class="form-control" />
+                    <span asp-validation-for="@Model.user.Username" class="text-danger"></span>
                 </div>
 
                 <div class="mb-8 form-group">
-                    <input asp-for="Password" class="form-control" type="hidden" />
+                    <input asp-for="@Model.user.Password" class="form-control" readonly type="hidden" />
                 </div>
-
+                
                 <div class="mb-8 form-group">
                     <b> <label class="control-label">First name</label></b>
-                    <input asp-for="FirstName" class="form-control" />
-                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                    <input asp-for="@Model.user.FirstName" class="form-control" />
+                    <span asp-validation-for="@Model.user.FirstName" class="text-danger"></span>
                 </div>
 
                 <div class="mb-8 form-group">
                     <b> <label class="control-label">Last name</label></b>
-                    <input asp-for="LastName" class="form-control" />
-                    <span asp-validation-for="LastName" class="text-danger"></span>
+                    <input asp-for="@Model.user.LastName" class="form-control" />
+                    <span asp-validation-for="@Model.user.LastName" class="text-danger"></span>
                 </div>
 
                 @* <div class="mb-8 form-group">
@@ -77,8 +80,8 @@
 
                 <div class="mb-8 form-group">
                     <b> <label class="control-label">Bio</label></b>
-                    <input asp-for="Bio" class="form-control" />
-                    <span asp-validation-for="Bio" class="text-danger"></span>
+                    <input asp-for="@Model.user.Bio" class="form-control" />
+                    <span asp-validation-for="@Model.user.Bio" class="text-danger"></span>
                 </div>
 
                 <div class="mb-8 form-group">

@@ -1,10 +1,15 @@
-﻿@using CroKnitters.Entities;
-@model Project
+﻿@model ProjectViewModel
 
 @{
     ViewData["Title"] = "New Project";
 }
 
+@if (TempData["manyImages"] != null)
+{
+    <div id="errorMessage" class="alert alert-danger">
+        @TempData["manyImages"]
+    </div>
+}
 
 <div class=" rounded-lg border text-center shadow-xl m-5 justify-content-start bg-white">
     <div class="p-5">
@@ -12,40 +17,43 @@
         <hr />
 
         <div class="pt-2 pb-2">
-            <form asp-action="CreateProject" method="post">
+            <form asp-action="CreateProject" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="ProjectId" name="ProjectId" />
+                <input type="hidden" asp-for="ActiveProject.ProjectId" name="ProjectId" />
+
+                @if (Context.Request.Cookies["userId"] != null)
+                {
+                    <input type="hidden" name="ActiveProject.OwnerId" value="@Context.Request.Cookies["userId"]" />
+                }
 
                 <!--pattern details: images, id, name, description, creation date, stitch type, stitch count-->
                 <div class="projectImage mb-3">
-                    <label for="ProjectImages">Upload images for your patterns:</label>
-                    <input type="file" id="ProjectImages" name="ProjectImages" accept="image/*">
-                    <button type="submit" class="btn">Upload</button>
-                </div>
-
-
-                <div class="mb-3 form-group">
-                    <b> <label asp-for="ProjectName" class="control-label">Project Name</label></b>
-                    <input asp-for="ProjectName" class="form-control" />
-                    <span asp-validation-for="ProjectName" class="text-danger"></span>
+                    <label for="Images">Upload images for your patterns:</label>
+                    <input type="file" id="Images" name="Images" multiple accept="image/*">
                 </div>
 
                 <div class="mb-3 form-group">
-                    <b> <label asp-for="Description" class="control-label"> Project Description</label></b>
-                    <textarea asp-for="Description" class="form-control"> </textarea>
+                    <b> <label asp-for="ActiveProject.ProjectName" class="control-label">Project Name</label></b>
+                    <input asp-for="ActiveProject.ProjectName" class="form-control" />
+                    <span asp-validation-for="ActiveProject.ProjectName" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3 form-group">
-                    <b> <label class="control-label">Creation Date</label></b>
-                    <input asp-for="CreationDate" type="datetime" class="form-control" readonly="readonly" />
+                    <b> <label asp-for="ActiveProject.Description" class="control-label"> Project Description</label></b>
+                    <textarea asp-for="ActiveProject.Description" class="form-control"> </textarea>
                 </div>
 
                 <div class="mb-3 form-group">
-                    <b> <label id="Platform" name="Platform" class="control-label"> Status</label></b>
-                    <select id="Status" name="Status" class="form-control">
+                    <b> <label id="ActiveProject.Status" name="ActiveProject.Status" class="control-label"> Status</label></b>
+                    <select id="ActiveProject.Status" name="ActiveProject.Status" class="form-control">
                         <option value="In-Progress">In-Progress</option>
                         <option value="Complete">Complete</option>
                     </select>
+                </div>
+
+                <div class="m-2 form-group">
+                    <b> <label class="control-label">Tag</label></b>
+                    <input asp-for="Tags" type="text" class="form-control" />
                 </div>
 
                 <div class="mb-8 form-group">

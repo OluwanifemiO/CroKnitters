@@ -17,9 +17,9 @@ public class Project
 
     public string? Status { get; set; }
 
-    public int OwnerId { get; set; }
+    public int? OwnerId { get; set; } = null!;
 
-    public User Owner { get; set; } = null!;
+    public User? Owner { get; set; } = null!;
 
     public ICollection<ProjectComment> ProjectComments { get; set; } = new List<ProjectComment>();
 
@@ -31,5 +31,4 @@ public class Project
 
     public ICollection<UserProject> UserProjects { get; set; } = new List<UserProject>();
 
-    public Admin Admin { get; set; } = null!;
 }

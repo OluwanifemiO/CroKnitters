@@ -1,5 +1,4 @@
-﻿@using CroKnitters.Entities;
-@model Pattern
+﻿@model PatternViewModel
 
 @{
     ViewData["Title"] = "Edit Pattern";
@@ -14,7 +13,7 @@
         <div class="pt-2 pb-2">
             <form asp-action="EditPattern" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="PatternId" />
+                <input type="hidden" asp-for="ActivePattern.PatternId" />
 
                 <!--pattern details: images, id, name, description, creation date, stitch type, stitch count-->
                 <div class="patternImage ">
@@ -25,29 +24,34 @@
 
 
                 <div class="m-2 form-group">
-                    <b> <label asp-for="PatternName" class="control-label">Pattern Name</label></b>
-                    <input asp-for="PatternName" class="form-control" />
-                    <span asp-validation-for="PatternName" class="text-danger"></span>
+                    <b> <label asp-for="ActivePattern.PatternName" class="control-label">Pattern Name</label></b>
+                    <input asp-for="ActivePattern.PatternName" class="form-control" />
+                    <span asp-validation-for="ActivePattern.PatternName" class="text-danger"></span>
                 </div>
 
                 <div class="m-2 form-group">
-                    <b> <label asp-for="Description" class="control-label"> Pattern Description</label></b>
-                    <textarea asp-for="Description" class="form-control"> </textarea>
+                    <b> <label asp-for="ActivePattern.Description" class="control-label"> Pattern Description</label></b>
+                    <textarea asp-for="ActivePattern.Description" class="form-control"> </textarea>
                 </div>
 
                 <div class="m-2 form-group">
                     <b> <label class="control-label">Creation Date</label></b>
-                    <input asp-for="CreationDate" type="datetime" class="form-control" readonly="readonly" />
+                    <input asp-for="ActivePattern.CreationDate" type="datetime" class="form-control" readonly="readonly" />
                 </div>
 
                 <div class="m-2 form-group">
                     <b> <label class="control-label">Stitch type</label></b>
-                    <input asp-for="StitchType" type="text" class="form-control" />
+                    <input asp-for="ActivePattern.StitchType" type="text" class="form-control" />
                 </div>
 
                 <div class="m-2 form-group">
                     <b> <label class="control-label">Stitch Count</label></b>
-                    <input asp-for="StitchCount" type="number" class="form-control" />
+                    <input asp-for="ActivePattern.StitchCount" type="number" class="form-control" />
+                </div>
+
+                <div class="m-2 form-group">
+                    <b> <label class="control-label">Tag</label></b>
+                    <input asp-for="Tags" type="text" class="form-control" />
                 </div>
 
                 <div class="mb-8 form-group">

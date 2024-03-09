@@ -1,0 +1,80 @@
+﻿@using CroKnitters.Entities;
+@model EventViewModel
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h2 class="text-center p-3">Events List</h2>
+
+<div class="justify-content-center rounded-lg border w-auto shadow-xl m-5 bg-white">
+
+    <div class="p-5">
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div id="errorMessage" class="alert alert-danger">
+                @TempData["ErrorMessage"]
+            </div>
+        }
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div id="successMessage" class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <p>
+            <a class="btn btn-primary p-2" asp-controller="Events" asp-action="CreateEvent">Create an Event</a>
+        </p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Event Title
+                    </th>
+                    <th>
+                        About
+                    </th>
+                    <th>
+                        Date held
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Events)
+                {
+                    <tr>
+                        <td>
+                             @item.EventTitle
+                        </td>
+                        <td>
+                             @item.Description
+                        </td>
+                        <td>
+                             @item.Date
+                        </td>
+
+                        <td>
+                            @if (item.Date < DateTime.Now)
+                            {
+                                <p>Past Event</p>
+                            }
+                            else
+                            {
+                                <form action="@Url.Action("RegisterUser", "Events", new { eventId = item.EventId })" method="post">
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                </form>
+                            }
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+

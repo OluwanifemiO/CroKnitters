@@ -1,5 +1,4 @@
-﻿@using CroKnitters.Entities;
-@model User
+﻿@model UserProfileViewModel
 
 @{
     ViewData["Title"] = "User Profile";
@@ -8,9 +7,9 @@
 <div class="justify-content-center rounded-lg border w-auto shadow-xl m-5 bg-white">
     <div class="p-5">
         <!--profile pic div-->
-        <div class="justify-center text-md-center profilePicture">
+        <div class="justify-center text-md-center profilePicture rounded-full ">
             <!--profile pic-->
-            <i class="bi bi-person-circle "></i>
+            <img src="@("~/img/profile/"+Model.UserImageSrc)" asp-append-version="true" alt="User Profile image" class="rounded-full"/>
         </div>
 
         <!--user details-->
@@ -21,56 +20,55 @@
                     User name
                 </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Username)
+                    @Html.DisplayFor(model => model.user.Username)
                 </dd>
 
                 <dt class="col-sm-2">
                     First name
                 </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.FirstName)
+                    @Html.DisplayFor(model => model.user.FirstName)
                 </dd>
 
                 <dt class="col-sm-2">
                     Last name
                 </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.LastName)
+                    @Html.DisplayFor(model => model.user.LastName)
                 </dd>
 
                 <dt class="col-sm-2">
-                    @Html.DisplayNameFor(model => model.Email)
+                    @Html.DisplayNameFor(model => model.user.Email)
                 </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Email)
+                    @Html.DisplayFor(model => model.user.Email)
                 </dd>
 
                 <!--if the user doesn't enter their location, don't show it-->
-
-                @if (@Model.City != null)
+                @if (@Model.user.City != null)
                 {
                     <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.City)
+                        @Html.DisplayNameFor(model => model.user.City)
                     </dt>
                     <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.City)
+                        @Html.DisplayFor(model => model.user.City)
                     </dd>
                 }
                 <dt class="col-sm-2">
                     Bio
                 </dt>
                 <dd class="col-sm-10">
-                    @Html.DisplayFor(model => model.Bio)
+                    @Html.DisplayFor(model => model.user.Bio)
                 </dd>
             </dl>
         </div>
 
         <div class="mb-3">
-            <p> <a asp-controller="Friend" asp-action="Index" role="link">Friends:</a> 0</p>
+            <p> <a asp-controller="Friend" asp-action="Index" style="text-decoration-line" role="link">Friends:</a> 0</p>
             <p> Communities joined: 0</p>
             <p> Comments: 0</p>
-            <p> <a asp-controller="Project" asp-action="Index" role="link">Projects: </a> 0</p>
-            <p> <a asp-controller="Pattern" asp-action="Index" role="link">Patterns: </a> 0</p>
+            <p> <a asp-controller="Project" asp-action="Index" style="text-decoration-line" role="link">Projects: </a> 0</p>
+            <p> <a asp-controller="Pattern" asp-action="Index" style="text-decoration-line" role="link">Patterns: </a> 0</p>
         </div>
 
         <a asp-controller="Profile" asp-action="EditProfile" class=" rounded-md bg-indigo-600 mt-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2">Edit Profile</a>

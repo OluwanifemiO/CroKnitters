@@ -1,5 +1,4 @@
-﻿@using CroKnitters.Entities;
-@model Project
+﻿@model ProjectViewModel
 
 @{
     ViewData["Title"] = "Edit Project";
@@ -14,7 +13,7 @@
         <div class="pt-2 pb-2">
             <form asp-action="EditProject" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="ProjectId" name="ProjectId" />
+                <input type="hidden" asp-for="ActiveProject.ProjectId" name="ProjectId" />
 
                 <!--pattern details: images, id, name, description, creation date, stitch type, stitch count-->
                 <div class="projectImage mb-3">
@@ -25,27 +24,32 @@
 
 
                 <div class="mb-3 form-group">
-                    <b> <label asp-for="ProjectName" class="control-label">Project Name</label></b>
-                    <input asp-for="ProjectName" class="form-control" />
-                    <span asp-validation-for="ProjectName" class="text-danger"></span>
+                    <b> <label asp-for="ActiveProject.ProjectName" class="control-label">Project Name</label></b>
+                    <input asp-for="ActiveProject.ProjectName" class="form-control" />
+                    <span asp-validation-for="ActiveProject.ProjectName" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3 form-group">
-                    <b> <label asp-for="Description" class="control-label"> Project Description</label></b>
-                    <textarea asp-for="Description" class="form-control"> </textarea>
+                    <b> <label asp-for="ActiveProject.Description" class="control-label"> Project Description</label></b>
+                    <textarea asp-for="ActiveProject.Description" class="form-control"> </textarea>
                 </div>
 
                 <div class="mb-3 form-group">
                     <b> <label class="control-label">Creation Date</label></b>
-                    <input asp-for="CreationDate" type="datetime" class="form-control" readonly="readonly" />
+                    <input asp-for="ActiveProject.CreationDate" type="datetime" class="form-control" readonly="readonly" />
                 </div>
 
                 <div class="mb-3 form-group">
-                    <b> <label id="Platform" name="Platform" class="control-label"> Status</label></b>
-                    <select id="Status" name="Status" class="form-control">
+                    <b> <label class="control-label"> Status</label></b>
+                    <select id="ActiveProject.Status" name="ActiveProject.Status" class="form-control">
                         <option value="In-Progress">In-Progress</option>
                         <option value="Complete">Complete</option>
                     </select>
+                </div>
+
+                <div class="m-2 form-group">
+                    <b> <label class="control-label">Tag</label></b>
+                    <input asp-for="Tags" type="text" class="form-control" />
                 </div>
 
                 <div class="mb-8 form-group">

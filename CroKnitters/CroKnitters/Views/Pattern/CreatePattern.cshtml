@@ -1,10 +1,15 @@
-﻿@using CroKnitters.Entities;
-@model Pattern
+﻿@model PatternViewModel
 
 @{
     ViewData["Title"] = "New Pattern";
 }
 
+@if (TempData["manyImages"] != null)
+{
+    <div id="errorMessage" class="alert alert-danger">
+        @TempData["manyImages"]
+    </div>
+}
 
 <div class=" rounded-lg border text-center shadow-xl m-5 justify-content-start bg-white">
     <div class="p-5">
@@ -12,42 +17,46 @@
         <hr />
 
         <div class="pt-2 pb-2">
-            <form asp-action="CreatePattern" method="post">
+            <form asp-action="CreatePattern" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="PatternId" name="PatternId" />
+                <input type="hidden" asp-for="ActivePattern.PatternId" name="PatternId" />
+
+                @if (Context.Request.Cookies["userId"] != null)
+                {
+                    <input type="hidden" name="ActivePattern.OwnerId" value="@Context.Request.Cookies["userId"]" />
+                }
 
                 <!--pattern details: images, id, name, description, creation date, stitch type, stitch count-->
-                <div class="patternImage ">
-                    <label for="PatternImages">Upload images for your patterns:</label>
-                    <input type="file" id="PatternImages" name="PatternImages" accept="image/*">
-                    <button type="submit" class="btn">Upload</button>
+                <div class="m-2 form-group">
+                    <b><label for="Images">Upload images for your patterns:</label></b>
+                    <input type="file" id="Images" name="Images" multiple accept="image/*">
                 </div>
 
 
                 <div class="m-2 form-group">
-                    <b> <label asp-for="PatternName" class="control-label">Pattern Name</label></b>
-                    <input asp-for="PatternName" class="form-control" />
-                    <span asp-validation-for="PatternName" class="text-danger"></span>
+                    <b> <label asp-for="ActivePattern.PatternName" class="control-label">Pattern Name</label></b>
+                    <input asp-for="ActivePattern.PatternName" class="form-control" />
+                    <span asp-validation-for="ActivePattern.PatternName" class="text-danger"></span>
                 </div>
 
                 <div class="m-2 form-group">
-                    <b> <label asp-for="Description" class="control-label"> Pattern Description</label></b>
-                    <textarea asp-for="Description" class="form-control"> </textarea>
-                </div>
-
-                <div class="m-2 form-group">
-                    <b> <label class="control-label">Creation Date</label></b>
-                    <input asp-for="CreationDate" type="datetime" class="form-control" readonly="readonly" />
+                    <b> <label asp-for="ActivePattern.Description" class="control-label"> Pattern Description</label></b>
+                    <textarea asp-for="ActivePattern.Description" class="form-control"> </textarea>
                 </div>
 
                 <div class="m-2 form-group">
                     <b> <label class="control-label">Stitch type</label></b>
-                    <input asp-for="StitchType" type="text" class="form-control" />
+                    <input asp-for="ActivePattern.StitchType" type="text" class="form-control" />
                 </div>
 
                 <div class="m-2 form-group">
                     <b> <label class="control-label">Stitch Count</label></b>
-                    <input asp-for="StitchCount" type="number" class="form-control" />
+                    <input asp-for="ActivePattern.StitchCount" type="number" class="form-control" />
+                </div>
+
+                <div class="m-2 form-group">
+                    <b> <label class="control-label">Tag</label></b>
+                    <input asp-for="Tags" type="text" class="form-control" />
                 </div>
 
                 <div class="mb-8 form-group">

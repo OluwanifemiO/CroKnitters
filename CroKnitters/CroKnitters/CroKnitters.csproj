@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="8.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13">
@@ -23,7 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Events\" />
+    <Folder Include="wwwroot\img\profile\" />
+    <Folder Include="wwwroot\img\projects\" />
   </ItemGroup>
 
 </Project>

@@ -10,9 +10,11 @@ C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Humanizer.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
@@ -20,10 +22,13 @@ C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
@@ -39,10 +44,13 @@ C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Drawing.Common.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.IO.Pipelines.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Memory.Data.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Runtime.Caching.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Text.Json.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\System.Windows.Extensions.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
@@ -55,6 +63,7 @@ C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\obj\Debug\net7.0\CroKnitters.csproj.AssemblyReference.cache
 C:\Users\ogida\OneDrive\Documents\GitHub\CroKnitters\CroKnitters\CroKnitters\obj\Debug\net7.0\CroKnitters.GeneratedMSBuildEditorConfig.editorconfig
