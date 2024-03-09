@@ -14,7 +14,7 @@
 
     <div class="flex flex-wrap justify-center mt-10 items-stretch">
         <!--Sign up form-->
-        <div class=" flex-1 rounded-lg border text-center w-full h-100 shadow-xl m-5 justify-content-start bg-white">
+        <div class=" flex-1 rounded-lg border text-center w-50 h-100 shadow-xl m-5 justify-content-start bg-white">
 
             <h2 class="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Create an account</h2>
 
@@ -25,11 +25,11 @@
                 </div>
             }
 
-            <div class="sm:mx-auto sm:w-full sm:max-w-sm p-3">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm grid p-3">
                 <form action="RegisterUser" method="POST">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                    <div class=" grid grid-cols-2 gap-4">
+                    <div class="grid-cols-2 gap-4">
 
                         <div>
                             <label for="FirstName" class="block text-sm font-bold leading-6 text-gray-900">First Name</label>
@@ -37,11 +37,15 @@
                             <span asp-validation-for="FirstName" class="text-danger"></span>
                         </div>
 
+                        <br />
+
                         <div>
                             <label for="LastName" class="block text-sm font-bold leading-6 text-gray-900">Last Name</label>
                             <input type="text" name="LastName" id="LastName" class="form-control block border-2 text-black-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="smith">
                             <span asp-validation-for="LastName" class="text-danger"></span>
                         </div>
+
+                        <br />
 
                         <div>
                             <label for="Username" class="block text-sm font-bold leading-6 text-gray-900">Username</label>
@@ -49,17 +53,23 @@
                             <span asp-validation-for="Username" class="text-danger"></span>
                         </div>
 
+                        <br />
+
                         <div>
                             <label for="Email" class="block text-sm font-bold leading-6 text-gray-900">Email</label>
                             <input type="Email" name="Email" id="Email" class="form-control block border-2 text-black-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith@gmail.com">
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
 
+                        <br />
+
                         <div>
                             <label for="Password" class="block text-sm font-bold leading-6 text-gray-900">Password</label>
                             <input type="password" name="Password" id="Password" class="form-control border-2 text-black-900 placeholder:text-black-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="password">
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
+
+                        <br />
 
                         <div>
                             <label for="Bio" class="block text-sm font-bold leading-6 text-gray-900">Bio</label>

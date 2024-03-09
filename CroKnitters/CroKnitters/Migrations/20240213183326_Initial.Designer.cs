@@ -4,6 +4,7 @@ using CroKnitters.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CroKnitters.Migrations
 {
     [DbContext(typeof(CrochetAppDbContext))]
-    partial class CrochetAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240213183326_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,36 +45,6 @@ namespace CroKnitters.Migrations
                     b.HasKey("AdminId");
 
                     b.ToTable("Admin");
-
-                    b.HasData(
-                        new
-                        {
-                            AdminId = 1,
-                            Email = "admin1@example.com",
-                            Password = "!a123456",
-                            Username = "Admin1"
-                        },
-                        new
-                        {
-                            AdminId = 2,
-                            Email = "admin2@example.com",
-                            Password = "!a123456",
-                            Username = "Admin2"
-                        },
-                        new
-                        {
-                            AdminId = 3,
-                            Email = "admin3@example.com",
-                            Password = "!a123456",
-                            Username = "Admin3"
-                        },
-                        new
-                        {
-                            AdminId = 4,
-                            Email = "admin4@example.com",
-                            Password = "!a123456",
-                            Username = "Admin4"
-                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.City", b =>
@@ -205,28 +178,6 @@ namespace CroKnitters.Migrations
                         .HasName("PK__Images__7516F70CC8F1B07F");
 
                     b.ToTable("Images");
-
-                    b.HasData(
-                        new
-                        {
-                            ImageId = 1,
-                            ImageSrc = "https://pbs.twimg.com/profile_images/1654080701292068865/AL2TAeY5_400x400.jpg"
-                        },
-                        new
-                        {
-                            ImageId = 2,
-                            ImageSrc = "https://i.redd.it/jeuusd992wd41.jpg"
-                        },
-                        new
-                        {
-                            ImageId = 3,
-                            ImageSrc = "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png"
-                        },
-                        new
-                        {
-                            ImageId = 4,
-                            ImageSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQV1_mGYXjq3eWha-wQIRkn6ulW9X6Ws-ztw&usqp=CAU"
-                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Language", b =>
@@ -537,58 +488,6 @@ namespace CroKnitters.Migrations
                         .HasName("PK__Province__FD0A6F83F858F43F");
 
                     b.ToTable("Provinces");
-
-                    b.HasData(
-                        new
-                        {
-                            ProvinceId = 1,
-                            ProvinceName = "Alberta"
-                        },
-                        new
-                        {
-                            ProvinceId = 2,
-                            ProvinceName = "British Columbia"
-                        },
-                        new
-                        {
-                            ProvinceId = 3,
-                            ProvinceName = "Manitoba"
-                        },
-                        new
-                        {
-                            ProvinceId = 4,
-                            ProvinceName = "New Brunswick"
-                        },
-                        new
-                        {
-                            ProvinceId = 5,
-                            ProvinceName = "Newfoundland and Labrador"
-                        },
-                        new
-                        {
-                            ProvinceId = 6,
-                            ProvinceName = "Nova Scotia"
-                        },
-                        new
-                        {
-                            ProvinceId = 7,
-                            ProvinceName = "Ontario"
-                        },
-                        new
-                        {
-                            ProvinceId = 8,
-                            ProvinceName = "Prince Edward Island"
-                        },
-                        new
-                        {
-                            ProvinceId = 9,
-                            ProvinceName = "Quebec"
-                        },
-                        new
-                        {
-                            ProvinceId = 10,
-                            ProvinceName = "Saskatchewan"
-                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Tag", b =>
@@ -688,52 +587,6 @@ namespace CroKnitters.Migrations
                     b.HasIndex("ImageId");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            Bio = "Just a guy whose favourite thing is to crochet :).",
-                            Email = "samD@example.com",
-                            FirstName = "Samuel",
-                            ImageId = 1,
-                            LastName = "Dane",
-                            Password = "!a123456",
-                            Username = "Samuel123"
-                        },
-                        new
-                        {
-                            UserId = 2,
-                            Bio = "Hello there! I like to crochet and knit...",
-                            Email = "juliaCrochet@example.com",
-                            FirstName = "Julia",
-                            ImageId = 2,
-                            LastName = "Fernandez",
-                            Password = "!a123456",
-                            Username = "Julia123"
-                        },
-                        new
-                        {
-                            UserId = 3,
-                            Bio = "My name is Juan Pablo and I'm exploring this craft as a new hobby.",
-                            Email = "Pablo@example.com",
-                            FirstName = "Juan",
-                            ImageId = 4,
-                            LastName = "Pablo",
-                            Password = "!a123456",
-                            Username = "Juan123"
-                        },
-                        new
-                        {
-                            UserId = 4,
-                            Bio = "Hello!",
-                            Email = "Dsmith@example.com",
-                            FirstName = "Delilah",
-                            ImageId = 3,
-                            LastName = "Smith",
-                            Password = "!a123456",
-                            Username = "Delilah123"
-                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.UserPattern", b =>

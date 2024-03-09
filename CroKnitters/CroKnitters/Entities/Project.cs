@@ -19,13 +19,15 @@ public class Project
 
     public int OwnerId { get; set; }
 
+    public int? ImageId { get; set; }
+
+    public Image? Image { get; set; }
+
     public User Owner { get; set; } = null!;
 
     public ICollection<ProjectComment> ProjectComments { get; set; } = new List<ProjectComment>();
 
     public ICollection<ProjectPattern> ProjectPatterns { get; set; } = new List<ProjectPattern>();
-
-    public ICollection<ProjectImage> ProjectImages { get; set; } = new List<ProjectImage>();
 
     public ICollection<ProjectTag> ProjectTags { get; set; } = new List<ProjectTag>();
 

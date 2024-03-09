@@ -3,12 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace CroKnitters.Migrations
 {
     /// <inheritdoc />
-    public partial class @new : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,21 +24,6 @@ namespace CroKnitters.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Admin", x => x.AdminId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Groups",
-                columns: table => new
-                {
-                    GroupId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    GroupName = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: false),
-                    Description = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__Groups__149AF36A0C281B44", x => x.GroupId);
                 });
 
             migrationBuilder.CreateTable(
@@ -199,75 +182,6 @@ namespace CroKnitters.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FriendsList",
-                columns: table => new
-                {
-                    ListId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    FriendId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__FriendsL__E3832805B148DDC9", x => x.ListId);
-                    table.ForeignKey(
-                        name: "FK__FriendsLi__Frien__3B40CD36",
-                        column: x => x.FriendId,
-                        principalTable: "Users",
-                        principalColumn: "UserId");
-                    table.ForeignKey(
-                        name: "FK__FriendsLi__UserI__3A4CA8FD",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "UserId");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "GroupUsers",
-                columns: table => new
-                {
-                    GroupUserId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    Role = table.Column<string>(type: "varchar(25)", unicode: false, maxLength: 25, nullable: false, defaultValueSql: "('Member')"),
-                    GroupId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__GroupUse__37F70716E0C22569", x => x.GroupUserId);
-                    table.ForeignKey(
-                        name: "FK__GroupUser__Group__40058253",
-                        column: x => x.GroupId,
-                        principalTable: "Groups",
-                        principalColumn: "GroupId");
-                    table.ForeignKey(
-                        name: "FK__GroupUser__UserI__3E1D39E1",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "UserId");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Messages",
-                columns: table => new
-                {
-                    MessageId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Content = table.Column<string>(type: "varchar(500)", unicode: false, maxLength: 500, nullable: false),
-                    SenderId = table.Column<int>(type: "int", nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__Messages__C87C0C9C167A84C6", x => x.MessageId);
-                    table.ForeignKey(
-                        name: "FK__Messages__Sender__2CF2ADDF",
-                        column: x => x.SenderId,
-                        principalTable: "Users",
-                        principalColumn: "UserId");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Patterns",
                 columns: table => new
                 {
@@ -280,8 +194,8 @@ namespace CroKnitters.Migrations
                     StitchType = table.Column<string>(type: "varchar(250)", unicode: false, maxLength: 250, nullable: true),
                     StitchCount = table.Column<int>(type: "int", nullable: true),
                     OwnerId = table.Column<int>(type: "int", nullable: false),
-                    AdminId = table.Column<int>(type: "int", nullable: false),
-                    ImageId = table.Column<int>(type: "int", nullable: true)
+                    ImageId = table.Column<int>(type: "int", nullable: true),
+                    AdminId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -293,7 +207,7 @@ namespace CroKnitters.Migrations
                         principalColumn: "AdminId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Patterns_Images_ImageId",
+                        name: "FK__Patterns__ImageI__3F466844",
                         column: x => x.ImageId,
                         principalTable: "Images",
                         principalColumn: "ImageId");
@@ -346,8 +260,8 @@ namespace CroKnitters.Migrations
                     Likes = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<string>(type: "varchar(20)", unicode: false, maxLength: 20, nullable: true, defaultValueSql: "('In-Progress')"),
                     OwnerId = table.Column<int>(type: "int", nullable: false),
-                    AdminId = table.Column<int>(type: "int", nullable: false),
-                    ImageId = table.Column<int>(type: "int", nullable: true)
+                    ImageId = table.Column<int>(type: "int", nullable: true),
+                    AdminId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -359,7 +273,7 @@ namespace CroKnitters.Migrations
                         principalColumn: "AdminId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Projects_Images_ImageId",
+                        name: "FK__Projects__ImageI__45F365D3",
                         column: x => x.ImageId,
                         principalTable: "Images",
                         principalColumn: "ImageId");
@@ -395,61 +309,6 @@ namespace CroKnitters.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "GroupChat",
-                columns: table => new
-                {
-                    GChatId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MessageId = table.Column<int>(type: "int", nullable: true),
-                    GroupId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__GroupCha__75C801E807CEC318", x => x.GChatId);
-                    table.ForeignKey(
-                        name: "FK__GroupChat__Group__31B762FC",
-                        column: x => x.GroupId,
-                        principalTable: "Groups",
-                        principalColumn: "GroupId");
-                    table.ForeignKey(
-                        name: "FK__GroupChat__Messa__30C33EC3",
-                        column: x => x.MessageId,
-                        principalTable: "Messages",
-                        principalColumn: "MessageId");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PrivateChat",
-                columns: table => new
-                {
-                    PChatId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    SenderId = table.Column<int>(type: "int", nullable: false),
-                    RecieverId = table.Column<int>(type: "int", nullable: false),
-                    MessageId = table.Column<int>(type: "int", nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime", nullable: false, defaultValueSql: "(getdate())")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__PrivateC__752CDBDC8FE2125C", x => x.PChatId);
-                    table.ForeignKey(
-                        name: "FK__PrivateCh__Messa__367C1819",
-                        column: x => x.MessageId,
-                        principalTable: "Messages",
-                        principalColumn: "MessageId");
-                    table.ForeignKey(
-                        name: "FK__PrivateCh__Recie__3587F3E0",
-                        column: x => x.RecieverId,
-                        principalTable: "Users",
-                        principalColumn: "UserId");
-                    table.ForeignKey(
-                        name: "FK__PrivateCh__Sende__3493CFA7",
-                        column: x => x.SenderId,
-                        principalTable: "Users",
-                        principalColumn: "UserId");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PatternComments",
                 columns: table => new
                 {
@@ -475,30 +334,6 @@ namespace CroKnitters.Migrations
                         principalColumn: "CommentId");
                     table.ForeignKey(
                         name: "FK__PatternCo__Patte__6477ECF3",
-                        column: x => x.PatternId,
-                        principalTable: "Patterns",
-                        principalColumn: "PatternId");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PatternImage",
-                columns: table => new
-                {
-                    PatImId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PatternId = table.Column<int>(type: "int", nullable: false),
-                    ImageId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__PatternI__469D527DA79D41C7", x => x.PatImId);
-                    table.ForeignKey(
-                        name: "FK__PatternIm__Image__236943A5",
-                        column: x => x.ImageId,
-                        principalTable: "Images",
-                        principalColumn: "ImageId");
-                    table.ForeignKey(
-                        name: "FK__PatternIm__Patte__22751F6C",
                         column: x => x.PatternId,
                         principalTable: "Patterns",
                         principalColumn: "PatternId");
@@ -584,30 +419,6 @@ namespace CroKnitters.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectImages",
-                columns: table => new
-                {
-                    ProImId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ProjectId = table.Column<int>(type: "int", nullable: false),
-                    ImageId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__ProjectI__05A6BB15FBD6324F", x => x.ProImId);
-                    table.ForeignKey(
-                        name: "FK__ProjectIm__Image__1F98B2C1",
-                        column: x => x.ImageId,
-                        principalTable: "Images",
-                        principalColumn: "ImageId");
-                    table.ForeignKey(
-                        name: "FK__ProjectIm__Proje__1EA48E88",
-                        column: x => x.ProjectId,
-                        principalTable: "Projects",
-                        principalColumn: "ProjectId");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "ProjectPatterns",
                 columns: table => new
                 {
@@ -679,122 +490,6 @@ namespace CroKnitters.Migrations
                         principalColumn: "UserId");
                 });
 
-            migrationBuilder.InsertData(
-                table: "Admin",
-                columns: new[] { "AdminId", "Email", "Password", "Username" },
-                values: new object[,]
-                {
-                    { 1, "admin1@example.com", "!a123456", "Admin1" },
-                    { 2, "admin2@example.com", "!a123456", "Admin2" },
-                    { 3, "admin3@example.com", "!a123456", "Admin3" },
-                    { 4, "admin4@example.com", "!a123456", "Admin4" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Images",
-                columns: new[] { "ImageId", "ImageSrc" },
-                values: new object[,]
-                {
-                    { 1, "https://pbs.twimg.com/profile_images/1654080701292068865/AL2TAeY5_400x400.jpg" },
-                    { 2, "https://i.redd.it/jeuusd992wd41.jpg" },
-                    { 3, "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png" },
-                    { 4, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQV1_mGYXjq3eWha-wQIRkn6ulW9X6Ws-ztw&usqp=CAU" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Provinces",
-                columns: new[] { "ProvinceId", "ProvinceName" },
-                values: new object[,]
-                {
-                    { 1, "Alberta" },
-                    { 2, "British Columbia" },
-                    { 3, "Manitoba" },
-                    { 4, "New Brunswick" },
-                    { 5, "Newfoundland and Labrador" },
-                    { 6, "Nova Scotia" },
-                    { 7, "Ontario" },
-                    { 8, "Prince Edward Island" },
-                    { 9, "Quebec" },
-                    { 10, "Saskatchewan" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Cities",
-                columns: new[] { "CityId", "CityName", "ProvinceId" },
-                values: new object[,]
-                {
-                    { 1, "Calgary", 1 },
-                    { 2, "Edmonton", 1 },
-                    { 3, "Red Deer", 1 },
-                    { 4, "Vancouver", 2 },
-                    { 5, "Surrey", 2 },
-                    { 6, "Victoria", 2 },
-                    { 7, "Burnaby", 2 },
-                    { 8, "Richmond", 2 },
-                    { 9, "Kelowna", 2 },
-                    { 10, "Abbotsford", 2 },
-                    { 11, "Coquitlam", 2 },
-                    { 12, "Saanich", 2 },
-                    { 13, "White Rock", 2 },
-                    { 14, "Delta", 2 },
-                    { 15, "Nanaimo", 2 },
-                    { 16, "Winnipeg", 3 },
-                    { 17, "Moncton", 4 },
-                    { 18, "St. John's", 5 },
-                    { 19, "Halifax", 6 },
-                    { 20, "Toronto", 7 },
-                    { 21, "Ottawa", 7 },
-                    { 22, "Hamilton", 7 },
-                    { 23, "Mississauga", 7 },
-                    { 24, "Brampton", 7 },
-                    { 25, "Kitchener", 7 },
-                    { 26, "London", 7 },
-                    { 27, "Markham", 7 },
-                    { 28, "Oshawa", 7 },
-                    { 29, "Vaughan", 7 },
-                    { 30, "Windsor", 7 },
-                    { 31, "St. Catharines", 7 },
-                    { 32, "Oakville", 7 },
-                    { 33, "Richmond Hill", 7 },
-                    { 34, "Burlington", 7 },
-                    { 35, "Sudbury", 7 },
-                    { 36, "Barrie", 7 },
-                    { 37, "Guelph", 7 },
-                    { 38, "Whitby", 7 },
-                    { 39, "Cambridge", 7 },
-                    { 40, "Milton", 7 },
-                    { 41, "Ajax", 7 },
-                    { 42, "Waterloo", 7 },
-                    { 43, "Thunder Bay", 7 },
-                    { 44, "Brantford", 7 },
-                    { 45, "Chatham", 7 },
-                    { 46, "Clarington", 7 },
-                    { 47, "Montréal", 9 },
-                    { 48, "Quebec City", 9 },
-                    { 49, "Laval", 9 },
-                    { 50, "Gatineau", 9 },
-                    { 51, "Longueuil", 9 },
-                    { 52, "Sherbrooke", 9 },
-                    { 53, "Lévis", 9 },
-                    { 54, "Saguenay", 9 },
-                    { 55, "Trois-Rivières", 9 },
-                    { 56, "Terrebonne", 9 },
-                    { 57, "Saint-Jérôme", 9 },
-                    { 58, "Saskatoon", 10 },
-                    { 59, "Regina", 10 }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Users",
-                columns: new[] { "UserId", "Bio", "CityId", "Email", "FirstName", "ImageId", "LastName", "Password", "Username" },
-                values: new object[,]
-                {
-                    { 1, "Just a guy whose favourite thing is to crochet :).", null, "samD@example.com", "Samuel", 1, "Dane", "!a123456", "Samuel123" },
-                    { 2, "Hello there! I like to crochet and knit...", null, "juliaCrochet@example.com", "Julia", 2, "Fernandez", "!a123456", "Julia123" },
-                    { 3, "My name is Juan Pablo and I'm exploring this craft as a new hobby.", null, "Pablo@example.com", "Juan", 4, "Pablo", "!a123456", "Juan123" },
-                    { 4, "Hello!", null, "Dsmith@example.com", "Delilah", 3, "Smith", "!a123456", "Delilah123" }
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_Cities_ProvinceId",
                 table: "Cities",
@@ -821,41 +516,6 @@ namespace CroKnitters.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FriendsList_FriendId",
-                table: "FriendsList",
-                column: "FriendId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_FriendsList_UserId",
-                table: "FriendsList",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_GroupChat_GroupId",
-                table: "GroupChat",
-                column: "GroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_GroupChat_MessageId",
-                table: "GroupChat",
-                column: "MessageId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_GroupUsers_GroupId",
-                table: "GroupUsers",
-                column: "GroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_GroupUsers_UserId",
-                table: "GroupUsers",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Messages_SenderId",
-                table: "Messages",
-                column: "SenderId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_PatternComments_AdminId",
                 table: "PatternComments",
                 column: "AdminId");
@@ -868,16 +528,6 @@ namespace CroKnitters.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_PatternComments_PatternId",
                 table: "PatternComments",
-                column: "PatternId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PatternImage_ImageId",
-                table: "PatternImage",
-                column: "ImageId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PatternImage_PatternId",
-                table: "PatternImage",
                 column: "PatternId");
 
             migrationBuilder.CreateIndex(
@@ -921,21 +571,6 @@ namespace CroKnitters.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PrivateChat_MessageId",
-                table: "PrivateChat",
-                column: "MessageId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PrivateChat_RecieverId",
-                table: "PrivateChat",
-                column: "RecieverId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PrivateChat_SenderId",
-                table: "PrivateChat",
-                column: "SenderId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ProjectComments_AdminId",
                 table: "ProjectComments",
                 column: "AdminId");
@@ -948,16 +583,6 @@ namespace CroKnitters.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_ProjectComments_ProjectId",
                 table: "ProjectComments",
-                column: "ProjectId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectImages_ImageId",
-                table: "ProjectImages",
-                column: "ImageId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectImages_ProjectId",
-                table: "ProjectImages",
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
@@ -1024,12 +649,6 @@ namespace CroKnitters.Migrations
                 name: "IX_Users_ImageId",
                 table: "Users",
                 column: "ImageId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Users_Username",
-                table: "Users",
-                column: "Username",
-                unique: true);
         }
 
         /// <inheritdoc />
@@ -1039,19 +658,7 @@ namespace CroKnitters.Migrations
                 name: "EventUsers");
 
             migrationBuilder.DropTable(
-                name: "FriendsList");
-
-            migrationBuilder.DropTable(
-                name: "GroupChat");
-
-            migrationBuilder.DropTable(
-                name: "GroupUsers");
-
-            migrationBuilder.DropTable(
                 name: "PatternComments");
-
-            migrationBuilder.DropTable(
-                name: "PatternImage");
 
             migrationBuilder.DropTable(
                 name: "PatternTags");
@@ -1060,13 +667,7 @@ namespace CroKnitters.Migrations
                 name: "Preferences");
 
             migrationBuilder.DropTable(
-                name: "PrivateChat");
-
-            migrationBuilder.DropTable(
                 name: "ProjectComments");
-
-            migrationBuilder.DropTable(
-                name: "ProjectImages");
 
             migrationBuilder.DropTable(
                 name: "ProjectPatterns");
@@ -1084,16 +685,10 @@ namespace CroKnitters.Migrations
                 name: "Events");
 
             migrationBuilder.DropTable(
-                name: "Groups");
-
-            migrationBuilder.DropTable(
                 name: "Languages");
 
             migrationBuilder.DropTable(
                 name: "Themes");
-
-            migrationBuilder.DropTable(
-                name: "Messages");
 
             migrationBuilder.DropTable(
                 name: "Comments");

@@ -23,6 +23,11 @@
                     <div class="d-sm-inline-flex justify-content-between">
                         <ul class="navbar-nav flex-grow-1">
                             <li class="nav-item">
+                                <!--post button-->
+                                <div>
+                                    <button></button>
+                                </div>
+
                                 <div class="nav-item dropdown">
                                     <a class="nav-link text-light hover:dropdownHover" href="#" id="accountDropdown" role="button">
                                         Account
@@ -35,9 +40,8 @@
                                             <a class="dropdown-item mb-1" asp-controller="Profile" asp-action="Index"><i class="bi bi-person"></i> Profile</a>
                                             <a class="dropdown-item mb-1" asp-controller="Pattern" asp-action="Index"><i class="bi bi-columns"></i> Patterns</a>
                                             <a class="dropdown-item mb-1" asp-controller="Project" asp-action="Index"><i class="bi bi-folder2-open"></i> Projects</a>
-                                            <a class="dropdown-item mb-1" asp-controller="Chats" asp-action="Index"><i class="bi bi-chat-dots"></i> Chats</a>
+                                            <a class="dropdown-item mb-1" asp-controller="Messaging" asp-action="Index"><i class="bi bi-chat-dots"></i> Chats</a>
                                             <a class="dropdown-item mb-1" asp-controller="Event" asp-action="Index"><i class="bi bi-calendar-event"></i> Events</a>
-                                            <a class="dropdown-item mb-1" asp-controller="Preference" asp-action="Index"><i class="bi bi-sliders"></i> Preferences</a>
                                             <a class="dropdown-item" asp-controller="Account" asp-action="Logout"><i class="bi bi-box-arrow-right"></i> Log Out</a>
                                         }
                                         else
@@ -52,10 +56,6 @@
 
                         </ul>
                     </div>
-
-                    <div class="d-sm-inline-flex justify-content-end text-white"> Logo and App name</div>
-                    <div class="d-sm-inline-flex justify-content-end text-white"><i class="bi bi-plus-square-fill"></i> New Pattern</div>
-                    <div class="d-sm-inline-flex justify-content-end text-white"><i class="bi bi-plus-square-fill"></i> New Project</div>
                 </div>
             </nav>
         </header>

@@ -45,17 +45,6 @@
                     @Html.DisplayFor(model => model.Email)
                 </dd>
 
-                <!--if the user doesn't enter their location, don't show it-->
-
-                @if (@Model.City != null)
-                {
-                    <dt class="col-sm-2">
-                        @Html.DisplayNameFor(model => model.City)
-                    </dt>
-                    <dd class="col-sm-10">
-                        @Html.DisplayFor(model => model.City)
-                    </dd>
-                }
                 <dt class="col-sm-2">
                     Bio
                 </dt>
@@ -66,16 +55,16 @@
         </div>
 
         <div class="mb-3">
-            <p> <a asp-controller="Friend" asp-action="Index" role="link">Friends:</a> 0</p>
+            <p> Friends: 0</p>
             <p> Communities joined: 0</p>
             <p> Comments: 0</p>
-            <p> <a asp-controller="Project" asp-action="Index" role="link">Projects: </a> 0</p>
-            <p> <a asp-controller="Pattern" asp-action="Index" role="link">Patterns: </a> 0</p>
+            <p> Projects: 0</p>
+            <p> Patterns: 0</p>
         </div>
 
         <a asp-controller="Profile" asp-action="EditProfile" class=" rounded-md bg-indigo-600 mt-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2">Edit Profile</a>
 
-
+       
     </div>
 </div>
 
