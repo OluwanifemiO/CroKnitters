@@ -1,16 +1,14 @@
-﻿@using CroKnitters.Entities;
-@model Feed
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="container mx-auto">
 
     <div class=" text-center">
-        @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+        @using (Html.BeginForm("#", "#", FormMethod.Get))
         {
             <div class="input-group search">
-                <input type="text" class="form-control rounded-3 w-25" name="search" placeholder="Search for pattern or project">
+                <input type="text" class="form-control rounded-3 w-25" name="search" placeholder="Search...">
                 <div class="col-sm-2 input-group-append">
                     <button class="btn btn-outline-secondary btn-dark" type="submit">Search</button>
                 </div>
@@ -18,75 +16,14 @@
         }
     </div>
 
-    <div>
-        <!--Patterns-->
-        <div class="flex flex-wrap justify-center mt-10 items-stretch">
-            <span class="text-2xl font-bold text-center">
-                Patterns
-            </span>
+    <div class="flex flex-wrap justify-center mt-10 items-stretch">
 
-            <div class=" flex-1 rounded-lg border text-center w-50 h-100 shadow-xl m-5 justify-content-start bg-white">
+        <div class=" flex-1 rounded-lg border text-center w-50 h-100 shadow-xl m-5 justify-content-start bg-white">
 
-                <div class="grid ">
-
-                    @foreach (var pattern in Model.Patterns)
-                    {
-                        <a asp-controller="Pattern" asp-action="Details" asp-route-id="@pattern.ActivePattern.PatternId" class="group m-2 grid-item">
-                            @if (@pattern.ActivePattern.PatternImages.Count > 0)
-                            {
-                                    var firstImageSrc = pattern.Images.First();
-
-                                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                                        <img src="@("~/img/patterns/"+firstImageSrc)" asp-append-version="true" width="300px" height="300px" alt="Pattern image" class="h-full w-full object-cover object-center group-hover:opacity-75">
-                                    </div>
-                                
-                            }
-                            <h3 class="mt-4 text-sm text-gray-700 font-bold">@pattern.ActivePattern.PatternName</h3>
-                            <p class="mt-1 text-lg font-medium text-gray-900"> by @pattern.ActivePattern.Owner.FirstName @pattern.ActivePattern.Owner.LastName</p>
-                            <p class="mt-1 text-lg font-medium text-gray-900"><i class="bi bi-suit-heart"></i> @pattern.ActivePattern.Likes</p>
-                            <p class="mt-1 text-lg font-medium text-gray-900"><i class="bi bi-chat-heart"></i>@pattern.NumberOfComments </p> <!--fix this-->
-                        </a>
-                    }
-
-                </div>
-
-            </div>
+            <p>No records yet.</p>
 
         </div>
 
-        <!--Projects-->
-        <div class="flex flex-wrap justify-center items-stretch">
-            <span class="text-2xl font-bold text-center">
-                Projects
-            </span>
-
-            <div class=" flex-1 rounded-lg border text-center w-50 h-100 shadow-xl m-5 justify-content-start bg-white">
-
-                <div class="grid ">
-
-                    @foreach (var project in Model.Projects)
-                    {
-                        <a asp-controller="Project" asp-action="Details" asp-route-id="@project.ActiveProject.ProjectId" class="group m-2 grid-item">
-                            @if (@project.ActiveProject.ProjectImages.Count > 0)
-                            {
-                                var firstImageSrc = project.Images.First();
-
-                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                                    <img src="@("~/img/projects/"+firstImageSrc)" asp-append-version="true" width="300px" height="300px" alt="Pattern image" class="h-full w-full object-cover object-center group-hover:opacity-75">
-                                </div>
-
-                            }
-                            <h3 class="mt-4 text-sm text-gray-700 font-bold">@project.ActiveProject.ProjectName</h3>
-                            <p class="mt-1 text-lg font-medium text-gray-900"> by @project.ActiveProject.Owner.FirstName @project.ActiveProject.Owner.LastName</p>
-                            <p class="mt-1 text-lg font-medium text-gray-900">@project.ActiveProject.Status</p>
-                            <p class="mt-1 text-lg font-medium text-gray-900"><i class="bi bi-suit-heart"></i> @project.ActiveProject.Likes</p>
-                            <p class="mt-1 text-lg font-medium text-gray-900"><i class="bi bi-chat-heart"></i>@project.NumberOfComments </p> <!--fix this-->
-                        </a>
-                    }
-
-                </div>
-
-
-        </div>
     </div>
+
 </div>

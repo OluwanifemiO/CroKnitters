@@ -15,5 +15,5 @@ public class ProjectComment
 
     public Project Project { get; set; } = null!;
 
-    //public Admin Admin { get; set; } = null!;
+    public Admin Admin { get; set; } = null!;
 }

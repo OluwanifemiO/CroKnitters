@@ -13,15 +13,9 @@ public class Comment
 
     public int Likes { get; set; }
 
-    public bool ApprovalStatus { get; set; }
-
     public int OwnerId { get; set; }
 
-    public int AdminId { get; set; }
-
     public User Owner { get; set; } = null!;
-
-    public Admin Admin { get; set; } = null!;
 
     public ICollection<PatternComment> PatternComments { get; set; } = new List<PatternComment>();
 
