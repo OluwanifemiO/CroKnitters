@@ -57,23 +57,6 @@ public partial class CrochetAppDbContext : DbContext
 
     public DbSet<UserProject> UserProjects { get; set; }
 
-    //new
-    public DbSet<ProjectImage> ProjectImages { get; set; }
-
-    public DbSet<PatternImage> PatternImage { get; set; }
-
-    public DbSet<Group> Groups { get; set; }
-
-    public DbSet<Message> Messages { get; set; }
-
-    public DbSet<GroupChat> GroupChat { get; set; }
-
-    public DbSet<PrivateChat> PrivateChat { get; set; }
-
-    public DbSet<FriendsList> FriendsList { get; set; }
-
-    public DbSet<GroupUser> GroupUsers { get; set; }
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -139,75 +122,6 @@ public partial class CrochetAppDbContext : DbContext
                 .HasConstraintName("FK__EventUser__UserI__693CA210");
         });
 
-        modelBuilder.Entity<FriendsList>(entity =>
-        {
-            entity.HasKey(e => e.ListId).HasName("PK__FriendsL__E3832805B148DDC9");
-
-            entity.ToTable("FriendsList");
-
-            entity.HasOne(d => d.Friend).WithMany(p => p.FriendsListFriends)
-                .HasForeignKey(d => d.FriendId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FriendsLi__Frien__3B40CD36");
-
-            entity.HasOne(d => d.User).WithMany(p => p.FriendsListUsers)
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__FriendsLi__UserI__3A4CA8FD");
-        });
-
-        modelBuilder.Entity<Group>(entity =>
-        {
-            entity.HasKey(e => e.GroupId).HasName("PK__Groups__149AF36A0C281B44");
-
-            entity.Property(e => e.CreationDate)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-            entity.Property(e => e.Description)
-                .HasMaxLength(500)
-                .IsUnicode(false);
-            entity.Property(e => e.GroupName)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-        });
-
-        modelBuilder.Entity<GroupChat>(entity =>
-        {
-            entity.HasKey(e => e.GChatId).HasName("PK__GroupCha__75C801E807CEC318");
-
-            entity.ToTable("GroupChat");
-
-            entity.Property(e => e.GChatId).HasColumnName("GChatId");
-
-            entity.HasOne(d => d.Group).WithMany(p => p.GroupChats)
-                .HasForeignKey(d => d.GroupId)
-                .HasConstraintName("FK__GroupChat__Group__31B762FC");
-
-            entity.HasOne(d => d.Message).WithMany(p => p.GroupChats)
-                .HasForeignKey(d => d.MessageId)
-                .HasConstraintName("FK__GroupChat__Messa__30C33EC3");
-        });
-
-        modelBuilder.Entity<GroupUser>(entity =>
-        {
-            entity.HasKey(e => e.GroupUserId).HasName("PK__GroupUse__37F70716E0C22569");
-
-            entity.Property(e => e.Role)
-                .HasMaxLength(25)
-                .IsUnicode(false)
-                .HasDefaultValueSql("('Member')");
-
-            entity.HasOne(d => d.Group).WithMany(p => p.GroupUsers)
-                .HasForeignKey(d => d.GroupId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__GroupUser__Group__40058253");
-
-            entity.HasOne(d => d.User).WithMany(p => p.GroupUsers)
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__GroupUser__UserI__3E1D39E1");
-        });
-
         modelBuilder.Entity<Image>(entity =>
         {
             entity.HasKey(e => e.ImageId).HasName("PK__Images__7516F70CC8F1B07F");
@@ -226,23 +140,6 @@ public partial class CrochetAppDbContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Message>(entity =>
-        {
-            entity.HasKey(e => e.MessageId).HasName("PK__Messages__C87C0C9C167A84C6");
-
-            entity.Property(e => e.Content)
-                .HasMaxLength(500)
-                .IsUnicode(false);
-            entity.Property(e => e.CreationDate)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-
-            entity.HasOne(d => d.Sender).WithMany(p => p.Messages)
-                .HasForeignKey(d => d.SenderId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Messages__Sender__2CF2ADDF");
-        });
-
         modelBuilder.Entity<Pattern>(entity =>
         {
             entity.HasKey(e => e.PatternId).HasName("PK__Patterns__0A631B521FCBD794");
@@ -259,6 +156,10 @@ public partial class CrochetAppDbContext : DbContext
             entity.Property(e => e.StitchType)
                 .HasMaxLength(250)
                 .IsUnicode(false);
+
+            entity.HasOne(d => d.Image).WithMany(p => p.Patterns)
+                .HasForeignKey(d => d.ImageId)
+                .HasConstraintName("FK__Patterns__ImageI__3F466844");
 
             entity.HasOne(d => d.Owner).WithMany(p => p.Patterns)
                 .HasForeignKey(d => d.OwnerId)
@@ -279,21 +180,6 @@ public partial class CrochetAppDbContext : DbContext
                 .HasForeignKey(d => d.PatternId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__PatternCo__Patte__6477ECF3");
-        });
-
-        modelBuilder.Entity<PatternImage>(entity =>
-        {
-            entity.HasKey(e => e.PatImId).HasName("PK__PatternI__469D527DA79D41C7");
-
-            entity.HasOne(d => d.Image).WithMany(p => p.PatternImages)
-                .HasForeignKey(d => d.ImageId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__PatternIm__Image__236943A5");
-
-            entity.HasOne(d => d.Pattern).WithMany(p => p.PatternImages)
-                .HasForeignKey(d => d.PatternId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__PatternIm__Patte__22751F6C");
         });
 
         modelBuilder.Entity<PatternTag>(entity =>
@@ -331,33 +217,6 @@ public partial class CrochetAppDbContext : DbContext
                 .HasConstraintName("FK__Preferenc__UserI__37A5467C");
         });
 
-        modelBuilder.Entity<PrivateChat>(entity =>
-        {
-            entity.HasKey(e => e.PChatId).HasName("PK__PrivateC__752CDBDC8FE2125C");
-
-            entity.ToTable("PrivateChat");
-
-            entity.Property(e => e.PChatId).HasColumnName("PChatId");
-            entity.Property(e => e.CreationDate)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-
-            entity.HasOne(d => d.Message).WithMany(p => p.PrivateChats)
-                .HasForeignKey(d => d.MessageId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__PrivateCh__Messa__367C1819");
-
-            entity.HasOne(d => d.Reciever).WithMany(p => p.PrivateChatRecievers)
-                .HasForeignKey(d => d.RecieverId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__PrivateCh__Recie__3587F3E0");
-
-            entity.HasOne(d => d.Sender).WithMany(p => p.PrivateChatSenders)
-                .HasForeignKey(d => d.SenderId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__PrivateCh__Sende__3493CFA7");
-        });
-
         modelBuilder.Entity<Project>(entity =>
         {
             entity.HasKey(e => e.ProjectId).HasName("PK__Projects__761ABEF001154132");
@@ -375,6 +234,10 @@ public partial class CrochetAppDbContext : DbContext
                 .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasDefaultValueSql("('In-Progress')");
+
+            entity.HasOne(d => d.Image).WithMany(p => p.Projects)
+                .HasForeignKey(d => d.ImageId)
+                .HasConstraintName("FK__Projects__ImageI__45F365D3");
 
             entity.HasOne(d => d.Owner).WithMany(p => p.Projects)
                 .HasForeignKey(d => d.OwnerId)
@@ -395,21 +258,6 @@ public partial class CrochetAppDbContext : DbContext
                 .HasForeignKey(d => d.ProjectId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__ProjectCo__Proje__60A75C0F");
-        });
-
-        modelBuilder.Entity<ProjectImage>(entity =>
-        {
-            entity.HasKey(e => e.ProImId).HasName("PK__ProjectI__05A6BB15FBD6324F");
-
-            entity.HasOne(d => d.Image).WithMany(p => p.ProjectImages)
-                .HasForeignKey(d => d.ImageId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ProjectIm__Image__1F98B2C1");
-
-            entity.HasOne(d => d.Project).WithMany(p => p.ProjectImages)
-                .HasForeignKey(d => d.ProjectId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ProjectIm__Proje__1EA48E88");
         });
 
         modelBuilder.Entity<ProjectPattern>(entity =>
@@ -531,7 +379,6 @@ public partial class CrochetAppDbContext : DbContext
                 .HasConstraintName("FK__UserProje__UserI__5165187F");
         });
 
-
         //seed data into the database:
         //iteration 1 data
         //seed into admin
@@ -556,12 +403,12 @@ public partial class CrochetAppDbContext : DbContext
                new City() { CityId = 2, CityName = "Edmonton", ProvinceId = 1 },
                new City() { CityId = 3, CityName = "Red Deer", ProvinceId = 1 },
                new City() { CityId = 4, CityName = "Vancouver", ProvinceId = 2 },
-               new City() { CityId = 5, CityName = "Surrey", ProvinceId = 2 },
-               new City() { CityId = 6, CityName = "Victoria", ProvinceId = 2 },
-               new City() { CityId = 7, CityName = "Burnaby", ProvinceId = 2 },
-               new City() { CityId = 8, CityName = "Richmond", ProvinceId = 2 },
-               new City() { CityId = 9, CityName = "Kelowna", ProvinceId = 2 },
-               new City() { CityId = 10, CityName = "Abbotsford", ProvinceId = 2 },
+	           new City() { CityId = 5, CityName = "Surrey", ProvinceId = 2 },
+	           new City() { CityId = 6, CityName = "Victoria", ProvinceId = 2 },
+	           new City() { CityId = 7, CityName = "Burnaby", ProvinceId = 2 },
+	           new City() { CityId = 8, CityName = "Richmond", ProvinceId = 2 },
+	           new City() { CityId = 9, CityName = "Kelowna", ProvinceId = 2 },
+	           new City() { CityId = 10, CityName = "Abbotsford", ProvinceId = 2 },
                new City() { CityId = 11, CityName = "Coquitlam", ProvinceId = 2 },
                new City() { CityId = 12, CityName = "Saanich", ProvinceId = 2 },
                new City() { CityId = 13, CityName = "White Rock", ProvinceId = 2 },
@@ -629,255 +476,12 @@ public partial class CrochetAppDbContext : DbContext
 
         //seed into image
         modelBuilder.Entity<Image>().HasData(
-               new Image() { ImageId = 1, ImageSrc = "image_one.jpg" },
-               new Image() { ImageId = 2, ImageSrc = "image_two.jpg" },
-               new Image() { ImageId = 3, ImageSrc = "image_three.png" },
-               new Image() { ImageId = 4, ImageSrc = "image_four.jpeg" },
-               new Image() { ImageId = 5, ImageSrc = "mesh-stitch.png" },
-               new Image() { ImageId = 6, ImageSrc = "treble-stitch.png" },
-               new Image() { ImageId = 7, ImageSrc = "chevron-stitch.png" },
-               new Image() { ImageId = 8, ImageSrc = "granny-square-stitch.png" },
-               new Image() { ImageId = 9, ImageSrc = "basketweave-stitch.png" },
-               new Image() { ImageId = 10, ImageSrc = "popcorn_stitch.jpeg" },
-               new Image() { ImageId = 11, ImageSrc = "baby-socks.jpeg" },
-               new Image() { ImageId = 12, ImageSrc = "winter-scarf.jpeg" },
-               new Image() { ImageId = 13, ImageSrc = "granny-square-blanket.jpeg" },
-               new Image() { ImageId = 14, ImageSrc = "amigurumi-bunny.jpeg" },
-               new Image() { ImageId = 15, ImageSrc = "summer-top.jpeg" },
-               new Image() { ImageId = 16, ImageSrc = "crochet-coaster.jpg" },
-               new Image() { ImageId = 17, ImageSrc = "cable-stitch.jpg" },
-               new Image() { ImageId = 18, ImageSrc = "shell-stitch.png" }
+               new Image() { ImageId = 1, ImageSrc = "https://pbs.twimg.com/profile_images/1654080701292068865/AL2TAeY5_400x400.jpg" },
+               new Image() { ImageId = 2, ImageSrc = "https://i.redd.it/jeuusd992wd41.jpg" },
+               new Image() { ImageId = 3, ImageSrc = "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png" },
+               new Image() { ImageId = 4, ImageSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQV1_mGYXjq3eWha-wQIRkn6ulW9X6Ws-ztw&usqp=CAU" }
            );
 
-        //seed into patterns
-        modelBuilder.Entity<Pattern>().HasData(
-               new Pattern() { PatternId = 1, PatternName = "Mesh Pattern", Description = "This pattern usually consists of single chains connected to one another in the middle to resemble a mesh design.", CreationDate = new DateTime(2024, 3, 3), Likes = 50, StitchType = "Mesh Stitch", StitchCount = 30, OwnerId = 1 },
-               new Pattern() { PatternId = 2, PatternName = "Treble Crochet Pattern", Description = "This pattern consists of treble crochet stitches.", CreationDate = new DateTime(2024, 3, 1), Likes = 20, StitchType = "Treble Crochet Stitch", StitchCount = 20, OwnerId = 2 },
-               new Pattern() { PatternId = 3, PatternName = "Chevron Pattern", Description = "This pattern usually consists of double crochet stitches connected to one to resemble a wave design.", CreationDate = new DateTime(2024, 2, 19), Likes = 80, StitchType = "Double Crochet Stitch", StitchCount = 70, OwnerId = 2 },
-               new Pattern() { PatternId = 4, PatternName = "Granny Square Pattern", Description = "This pattern usually consists of Double crochet stitches that are connected in a unique way.", CreationDate = new DateTime(2024, 2, 12), Likes = 100, StitchType = "Double Crochet Stitch", StitchCount = 100, OwnerId = 3 },
-               new Pattern() { PatternId = 5, PatternName = "Basketweave Pattern", Description = "This pattern creates a woven texture resembling a basket.", CreationDate = new DateTime(2024, 2, 18), Likes = 45, StitchType = "Basketweave Stitch", StitchCount = 25, OwnerId = 1 },
-               new Pattern() { PatternId = 6, PatternName = "Popcorn Stitch Pattern", Description = "This pattern features the popcorn stitch for a textured and raised effect.", CreationDate = new DateTime(2024, 2, 7), Likes = 30, StitchType = "Popcorn Stitch", StitchCount = 15, OwnerId = 3 },
-               new Pattern() { PatternId = 7, PatternName = "Cable Stitch Pattern", Description = "This pattern creates a twisted and braided appearance using cable stitches.", CreationDate = new DateTime(2024, 2, 20), Likes = 60, StitchType = "Cable Stitch", StitchCount = 40, OwnerId = 1 },
-               new Pattern() { PatternId = 8, PatternName = "Shell Stitch Pattern", Description = "This pattern forms a scallop-like shell using various crochet stitches.", CreationDate = new DateTime(2024, 3, 1), Likes = 75, StitchType = "Shell Stitch", StitchCount = 50, OwnerId = 2 }
-
-               );
-
-        //seed into projects
-        modelBuilder.Entity<Project>().HasData(
-              new Project() { ProjectId = 1, ProjectName = "Baby Socks", Description = "This is a work in progress socks for my six month old baby.", CreationDate = new DateTime(2024, 3, 3), Likes = 50, Status = "In-Progress", OwnerId = 1 },
-              new Project() { ProjectId = 2, ProjectName = "Winter Scarf", Description = "A warm scarf for the winter season, using a bobble stitch pattern.", CreationDate = DateTime.Now.AddDays(-10), Likes = 75, Status = "Completed", OwnerId = 2 },
-              new Project() { ProjectId = 3, ProjectName = "Granny Square Blanket", Description = "A colorful blanket made from granny squares. Each square features a different color, aiming for a vibrant look.", CreationDate = DateTime.Now.AddDays(-20), Likes = 90, Status = "In-Progress", OwnerId = 3 },
-              new Project() { ProjectId = 4, ProjectName = "Amigurumi Bunny", Description = "A cute bunny amigurumi project for the upcoming Easter holidays.", CreationDate = DateTime.Now.AddDays(-5), Likes = 120, Status = "Completed", OwnerId = 1 },
-              new Project() { ProjectId = 5, ProjectName = "Summer Top", Description = "A light and breezy top perfect for summer, using cotton yarn.", CreationDate = DateTime.Now.AddDays(-30), Likes = 65, Status = "In-Progress", OwnerId = 2 },
-              new Project() { ProjectId = 6, ProjectName = "Crochet Coasters", Description = "Set of coasters for the dining table, featuring a floral motif.", CreationDate = DateTime.Now.AddDays(-15), Likes = 40, Status = "Completed", OwnerId = 3 }
-              );
-
-        //seed into theme
-        modelBuilder.Entity<Theme>().HasData(
-            new Theme() { ThemeId = 1, ThemeTitle = "Light" },
-            new Theme() { ThemeId = 2, ThemeTitle = "Dark" }
-            );
-
-        //seed into language
-        modelBuilder.Entity<Language>().HasData(
-            new Language() { LanguageId = 1, LanguageName = "English" },
-            new Language() { LanguageId = 2, LanguageName = "French" }
-            );
-
-        //seed into Preference 
-        modelBuilder.Entity<Preference>().HasData(
-            new Preference() { PreferenceId = 1, LanguageId = 1, ThemeId = 1, UserId = 1 },
-            new Preference() { PreferenceId = 2, LanguageId = 2, ThemeId = 2, UserId = 2 }
-            );
-
-        //seed into comment
-        modelBuilder.Entity<Comment>().HasData(
-            new Comment() { CommentId = 1, Content = "Very pretty!", CreationDate = DateTime.Now.AddDays(-10), Likes = 10, ApprovalStatus = true, OwnerId = 1, AdminId = 1},
-            new Comment() { CommentId = 2, Content = "Super cute!", CreationDate = DateTime.Now.AddDays(-10), Likes = 20, ApprovalStatus = true, OwnerId = 2, AdminId = 2 },
-            new Comment() { CommentId = 3, Content = "Love the colors!", CreationDate = DateTime.Now.AddDays(-10), Likes = 15, ApprovalStatus = true, OwnerId = 3, AdminId = 1 },
-            new Comment() { CommentId = 4, Content = "Shitty job!", CreationDate = DateTime.Now.AddDays(-10), Likes = 12, ApprovalStatus = false, OwnerId = 4, AdminId = 1 }
-            );
-
-        //seed into tag
-        modelBuilder.Entity<Tag>().HasData(
-            new Tag() { TagId = 1, TagName = "Amazing" },
-            new Tag() { TagId = 2, TagName = "Cute" }, 
-            new Tag() { TagId = 3, TagName = "Elegant" },
-            new Tag() { TagId = 4, TagName = "Classic" },
-            new Tag() { TagId = 5, TagName = "Modern" },
-            new Tag() { TagId = 6, TagName = "Colorful" },
-            new Tag() { TagId = 7, TagName = "Simple" },
-            new Tag() { TagId = 8, TagName = "Unique" }
-            );
-
-        //seed into Events
-        modelBuilder.Entity<Event>().HasData(
-            new Event() { EventId = 1, EventTitle = "Yarn sale at Kitchener, Ontario.", Description = "Don't miss out on amazing deals at our annual yarn sale! From colorful skeins to luxurious blends, we've got something for every project. See you there!", Date = DateTime.Now.AddDays(80), OwnerId = 1 },
-            new Event() { EventId = 2, EventTitle = "Project showcase at Toronto, Ontario", Description = "Join us for an inspiring evening as local crafters showcase their latest creations. From intricate afghans to cozy scarves, you'll find plenty of ideas to spark your creativity.", Date = DateTime.Now.AddDays(70), OwnerId = 2 },
-            new Event() { EventId = 3, EventTitle = "Crochet workshop in Vancouver, BC", Description = "Learn the art of crochet from experienced instructors in a fun and supportive environment. Whether you're a complete beginner or looking to refine your skills, this workshop is perfect for you!", Date = DateTime.Now.AddDays(60), OwnerId = 3 },
-            new Event() { EventId = 4, EventTitle = "Knitting and Crochet Expo in Montreal, QC", Description = "Discover the latest trends and techniques in knitting and crochet at our annual expo. From interactive workshops to vendor booths featuring the hottest yarns, you'll find everything you need to take your crafting to the next level.", Date = new DateTime(2024, 3, 1, 12, 30, 0), OwnerId = 4 },
-            new Event() { EventId = 5, EventTitle = "Online Crochet Class - Beginners Welcome!", Description = "Join us for a virtual crochet class designed for beginners. Learn essential stitches and techniques from the comfort of your own home, with personalized instruction and plenty of support.", Date = DateTime.Now.AddDays(50), OwnerId = 2 },
-            new Event() { EventId = 6, EventTitle = "Local Yarn Swap Meet in Calgary, AB", Description = "Trade your stash and discover new treasures at our yarn swap meet. Bring your unwanted yarn and notions to exchange with fellow crafters, and leave with fresh inspiration for your next project.", Date = DateTime.Now.AddDays(80), OwnerId = 4 }
-            );
-
-        //seed into FriendList
-        modelBuilder.Entity<FriendsList>().HasData(
-            new FriendsList() { ListId = 1, FriendId = 1, UserId = 2 },
-            new FriendsList() { ListId = 2, FriendId = 1, UserId = 3 },
-            new FriendsList() { ListId = 3, FriendId = 1, UserId = 4 },
-            new FriendsList() { ListId = 4, FriendId = 2, UserId = 3 },
-            new FriendsList() { ListId = 5, FriendId = 2, UserId = 4 }
-            );
-
-        //seed into Group
-        modelBuilder.Entity<Group>().HasData(
-            new Group() { GroupId = 1, GroupName = "Lazy Crocheters community", CreationDate = DateTime.Now.AddDays(-10), Description = "Some lazy people coming together to motivate one another." },
-            new Group() { GroupId = 2, GroupName = "Weekend Crochet Warriors", CreationDate = DateTime.Now.AddDays(-10), Description = "Weekend warriors unite for crochet projects big and small. All skill levels welcome." },
-            new Group() { GroupId = 3, GroupName = "Eco-Friendly Fiber Artists", CreationDate = DateTime.Now.AddDays(-10), Description = "A community focused on using eco-friendly and sustainable materials in our crochet and knitting projects." }
-            );
-
-
-        //seed into eventusers
-        modelBuilder.Entity<EventUser>().HasData(
-            new EventUser() { EventUserId = 1, EventId = 1, UserId = 1 },
-            new EventUser() { EventUserId = 2, EventId = 2, UserId = 2 },
-            new EventUser() { EventUserId = 3, EventId = 3, UserId = 3 },
-            new EventUser() { EventUserId = 4, EventId = 4, UserId = 4 },
-            new EventUser() { EventUserId = 5, EventId = 5, UserId = 3 },
-            new EventUser() { EventUserId = 6, EventId = 6, UserId = 2 }
-            );
-
-        //seed into groupchat
-        modelBuilder.Entity<GroupChat>().HasData(
-            new GroupChat() { GChatId = 1, MessageId = 1, GroupId = 1 },
-            new GroupChat() { GChatId = 2, MessageId = 2, GroupId = 1 },
-            new GroupChat() { GChatId = 3, MessageId = 3, GroupId = 2 },
-            new GroupChat() { GChatId = 4, MessageId = 4, GroupId = 2 },
-            new GroupChat() { GChatId = 5, MessageId = 5, GroupId = 3 },
-            new GroupChat() { GChatId = 6, MessageId = 6, GroupId = 3 }
-            );
-
-        //seed into message
-        modelBuilder.Entity<Message>().HasData(
-            new Message() { MessageId = 1, Content = "Hey everyone! Excited to join this group.", CreationDate = DateTime.Now.AddDays(-10), SenderId = 1 },
-            new Message() { MessageId = 2, Content = "Welcome! Looking forward to seeing your projects.", CreationDate = DateTime.Now.AddDays(-10), SenderId = 2 },
-            new Message() { MessageId = 3, Content = "Does anyone have tips for a beginner?", CreationDate = DateTime.Now.AddDays(-10), SenderId = 3 },
-            new Message() { MessageId = 4, Content = "Sure! I'd recommend starting with simple patterns and bulky yarn. It's easier to see your stitches.", CreationDate = DateTime.Now.AddDays(-10), SenderId = 4 },
-            new Message() { MessageId = 5, Content = "I'm trying to find eco-friendly yarn. Any brand recommendations?", CreationDate = DateTime.Now.AddDays(-10), SenderId = 2 },
-            new Message() { MessageId = 6, Content = "I love using bamboo and recycled cotton yarns. They're great for the environment and work well for many projects.", CreationDate = DateTime.Now.AddDays(-10), SenderId = 4 },
-            new Message() { MessageId = 7, Content = "Hey! How's it going?", CreationDate = DateTime.Now.AddDays(-10), SenderId = 1 },
-            new Message() { MessageId = 8, Content = "Hi there! Not bad, just working on a new project. How about you?", CreationDate = DateTime.Now.AddDays(-10), SenderId = 2 },
-            new Message() { MessageId = 9, Content = "Hey! What kind of project are you working on?", CreationDate = DateTime.Now.AddDays(-10), SenderId = 1 },
-            new Message() { MessageId = 10, Content = "I'm trying out a new crochet pattern for a scarf. It's a bit challenging, but fun!", CreationDate = DateTime.Now.AddDays(-10), SenderId = 3 },
-            new Message() { MessageId = 11, Content = "Hello! Do you have a favorite type of yarn you like to use?", CreationDate = DateTime.Now.AddDays(-10), SenderId = 1 },
-            new Message() { MessageId = 12, Content = "I love using soft merino wool for scarves. It gives a cozy feel. How about you?", CreationDate = DateTime.Now.AddDays(-10), SenderId = 4 }
-            );
-
-        //seed into groupusers
-        modelBuilder.Entity<GroupUser>().HasData(
-            new GroupUser() { GroupUserId = 1, Role = "Admin", GroupId = 1, UserId = 2 },
-            new GroupUser() { GroupUserId = 2, Role = "Member", GroupId = 1, UserId = 1 },
-            new GroupUser() { GroupUserId = 3, Role = "Admin", GroupId = 2, UserId = 3 },
-            new GroupUser() { GroupUserId = 4, Role = "Member", GroupId = 2, UserId = 4 },
-            new GroupUser() { GroupUserId = 5, Role = "Admin", GroupId = 3, UserId = 2 },
-            new GroupUser() { GroupUserId = 6, Role = "Member", GroupId = 3, UserId = 4 }
-            );
-
-        //seed into patterncomment
-        modelBuilder.Entity<PatternComment>().HasData(
-            new PatternComment() { PatComId = 1, PatternId = 1, CommentId = 2 },
-            new PatternComment() { PatComId = 2, PatternId = 1, CommentId = 1 },
-            new PatternComment() { PatComId = 3, PatternId = 2, CommentId = 3 },
-            new PatternComment() { PatComId = 4, PatternId = 2, CommentId = 4 },
-            new PatternComment() { PatComId = 5, PatternId = 3, CommentId = 2 },
-            new PatternComment() { PatComId = 6, PatternId = 3, CommentId = 4 }
-            );
-
-        //seed into projectcomment
-        modelBuilder.Entity<ProjectComment>().HasData(
-            new ProjectComment() { ProComId = 1, ProjectId = 1, CommentId = 2 },
-            new ProjectComment() { ProComId = 2, ProjectId = 1, CommentId = 1 },
-            new ProjectComment() { ProComId = 3, ProjectId = 2, CommentId = 3 },
-            new ProjectComment() { ProComId = 4, ProjectId = 2, CommentId = 4 },
-            new ProjectComment() { ProComId = 5, ProjectId = 3, CommentId = 2 },
-            new ProjectComment() { ProComId = 6, ProjectId = 3, CommentId = 4 }
-            );
-
-        //seed into patternimage
-        modelBuilder.Entity<PatternImage>().HasData(
-            new PatternImage() { PatImId = 1, PatternId = 1, ImageId = 5 },
-            new PatternImage() { PatImId = 2, PatternId = 2, ImageId = 6 },
-            new PatternImage() { PatImId = 3, PatternId = 3, ImageId = 7 },
-            new PatternImage() { PatImId = 4, PatternId = 4, ImageId = 8 },
-            new PatternImage() { PatImId = 5, PatternId = 5, ImageId = 9 },
-            new PatternImage() { PatImId = 6, PatternId = 6, ImageId = 10 },
-            new PatternImage() { PatImId = 7, PatternId = 7, ImageId = 17 },
-            new PatternImage() { PatImId = 8, PatternId = 8, ImageId = 18}
-            );
-
-        //seed into projectimage
-        modelBuilder.Entity<ProjectImage>().HasData(
-            new ProjectImage() { ProImId = 1, ProjectId = 1, ImageId = 11 },
-            new ProjectImage() { ProImId = 2, ProjectId = 2, ImageId = 12 },
-            new ProjectImage() { ProImId = 3, ProjectId = 3, ImageId = 13 },
-            new ProjectImage() { ProImId = 4, ProjectId = 4, ImageId = 14 },
-            new ProjectImage() { ProImId = 5, ProjectId = 5, ImageId = 15 },
-            new ProjectImage() { ProImId = 6, ProjectId = 6, ImageId = 16 }
-            );
-
-        //seed into patterntag
-        modelBuilder.Entity<PatternTag>().HasData(
-            new PatternTag() { PatTagId = 1, PatternId = 1, TagId = 1 },
-            new PatternTag() { PatTagId = 2, PatternId = 2, TagId = 2 },
-            new PatternTag() { PatTagId = 3, PatternId = 3, TagId = 3 },
-            new PatternTag() { PatTagId = 4, PatternId = 4, TagId = 4 },
-            new PatternTag() { PatTagId = 5, PatternId = 5, TagId = 5 },
-            new PatternTag() { PatTagId = 6, PatternId = 6, TagId = 6 },
-            new PatternTag() { PatTagId = 7, PatternId = 7, TagId = 7 },
-            new PatternTag() { PatTagId = 8, PatternId = 8, TagId = 8 }
-            );
-
-        //seed into projecttag
-        modelBuilder.Entity<ProjectTag>().HasData(
-            new ProjectTag() { ProTagId = 1, ProjectId = 1, TagId = 8 },
-            new ProjectTag() { ProTagId = 2, ProjectId = 2, TagId = 7 },
-            new ProjectTag() { ProTagId = 3, ProjectId = 3, TagId = 6 },
-            new ProjectTag() { ProTagId = 4, ProjectId = 4, TagId = 5 },
-            new ProjectTag() { ProTagId = 5, ProjectId = 5, TagId = 4 },
-            new ProjectTag() { ProTagId = 6, ProjectId = 6, TagId = 3 }
-            );
-
-        //seed into userpattern
-        modelBuilder.Entity<UserPattern>().HasData(
-            new UserPattern() { UpatId = 1, PatternId = 1, UserId = 1 },
-            new UserPattern() { UpatId = 2, PatternId = 2, UserId = 1 },
-            new UserPattern() { UpatId = 3, PatternId = 3, UserId = 2 },
-            new UserPattern() { UpatId = 4, PatternId = 4, UserId = 2 },
-            new UserPattern() { UpatId = 5, PatternId = 5, UserId = 3 },
-            new UserPattern() { UpatId = 6, PatternId = 6, UserId = 3 },
-            new UserPattern() { UpatId = 7, PatternId = 7, UserId = 4 },
-            new UserPattern() { UpatId = 8, PatternId = 8, UserId = 4 }
-            );
-
-        //seed into userproject
-        modelBuilder.Entity<UserProject>().HasData(
-            new UserProject() { UproId = 1, ProjectId = 1, UserId = 1 },
-            new UserProject() { UproId = 2, ProjectId = 2, UserId = 1 },
-            new UserProject() { UproId = 3, ProjectId = 3, UserId = 1 },
-            new UserProject() { UproId = 4, ProjectId = 4, UserId = 3 },
-            new UserProject() { UproId = 5, ProjectId = 5, UserId = 3 },
-            new UserProject() { UproId = 6, ProjectId = 6, UserId = 3 }
-            );
-
-        //seed into privatechat
-        modelBuilder.Entity<PrivateChat>().HasData(
-            new PrivateChat() {PChatId = 1, CreationDate = DateTime.Now.AddDays(-10), MessageId = 7, SenderId = 1, RecieverId = 2 },
-            new PrivateChat() {PChatId = 2, CreationDate = DateTime.Now.AddDays(-10), MessageId = 8, SenderId = 2, RecieverId = 1 },
-            new PrivateChat() {PChatId = 3, CreationDate = DateTime.Now.AddDays(-10), MessageId = 9, SenderId = 1, RecieverId = 3 },
-            new PrivateChat() {PChatId = 4, CreationDate = DateTime.Now.AddDays(-10), MessageId = 10, SenderId = 3, RecieverId = 1 },
-            new PrivateChat() {PChatId = 5, CreationDate = DateTime.Now.AddDays(-10), MessageId = 11, SenderId = 1, RecieverId = 4 },
-            new PrivateChat() {PChatId = 6, CreationDate = DateTime.Now.AddDays(-10), MessageId = 12, SenderId = 4, RecieverId = 1 }
-            );
     }
 
 }

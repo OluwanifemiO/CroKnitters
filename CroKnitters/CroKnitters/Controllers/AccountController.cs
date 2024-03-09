@@ -99,6 +99,16 @@ namespace CroKnitters.Controllers
                 //if the user with that username exists
                 User? user = _dbContext.Users.Where(u => u.Username == username).FirstOrDefault();
 
+                //add their details to the profile view model
+                ProfileViewModel profileViewModel = new ProfileViewModel
+                {
+                    UserId = user.UserId,
+                    Username = user.Username,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    Bio = user.Bio
+                };
 
                 if (user == null)
                 {
@@ -132,6 +142,7 @@ namespace CroKnitters.Controllers
                     HttpOnly = true // Ensures the cookie is not accessible through JavaScript
                 });
 
+                ViewData["ProfileViewModel"] = profileViewModel;
                 return RedirectToAction("Index", "Home");
             }
 

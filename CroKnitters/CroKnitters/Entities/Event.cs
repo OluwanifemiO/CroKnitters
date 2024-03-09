@@ -11,8 +11,6 @@ public class Event
 
     public string Description { get; set; } = null!;
 
-    public DateTime Date { get; set; }
-
     public int OwnerId { get; set; }
 
     public ICollection<EventUser> EventUsers { get; set; } = new List<EventUser>();
