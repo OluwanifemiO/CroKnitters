@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddSignalR();
+
 builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = false;
@@ -39,6 +41,11 @@ app.UseRouting();
 app.UseSession();
 
 app.UseAuthorization();
+
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapHub<ChatHub>();
+//});
 
 app.MapControllerRoute(
     name: "default",

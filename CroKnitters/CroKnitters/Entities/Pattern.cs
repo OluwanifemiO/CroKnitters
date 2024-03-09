@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CroKnitters.Entities;
 
@@ -7,8 +8,10 @@ public class Pattern
 {
     public int PatternId { get; set; }
 
+    [Required(ErrorMessage = "Pattern name is required")]
     public string PatternName { get; set; } = null!;
 
+    [Required(ErrorMessage = "A description for this pattern is required")]
     public string? Description { get; set; }
 
     public DateTime CreationDate { get; set; }
@@ -21,11 +24,7 @@ public class Pattern
 
     public int OwnerId { get; set; }
 
-    public int? ImageId { get; set; }
-
-    public Image? Image { get; set; }
-
-    public User Owner { get; set; } = null!;
+    public User? Owner { get; set; } = null!;
 
     public ICollection<PatternComment> PatternComments { get; set; } = new List<PatternComment>();
 
@@ -33,7 +32,7 @@ public class Pattern
 
     public ICollection<ProjectPattern> ProjectPatterns { get; set; } = new List<ProjectPattern>();
 
-    public ICollection<UserPattern> UserPatterns { get; set; } = new List<UserPattern>();
+    public ICollection<PatternImage> PatternImages { get; set; } = new List<PatternImage>();
 
-    public Admin Admin { get; set; } = null!;
+    public ICollection<UserPattern> UserPatterns { get; set; } = new List<UserPattern>();
 }

@@ -21,32 +21,100 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\15709220.jpeg",
+      "PackagePath": "staticwebassets\\img\\15709220.jpeg"
+    },
+    {
       "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\background.jpg",
       "PackagePath": "staticwebassets\\img\\background.jpg"
     },
     {
-      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\Screenshot 2024-02-21 125354.png",
-      "PackagePath": "staticwebassets\\img\\patterns\\Screenshot 2024-02-21 125354.png"
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\alpine-stitch.jpeg",
+      "PackagePath": "staticwebassets\\img\\patterns\\alpine-stitch.jpeg"
     },
     {
-      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\Screenshot 2024-02-21 131258.png",
-      "PackagePath": "staticwebassets\\img\\patterns\\Screenshot 2024-02-21 131258.png"
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\basketweave-stitch.png",
+      "PackagePath": "staticwebassets\\img\\patterns\\basketweave-stitch.png"
     },
     {
-      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\Screenshot 2024-02-21 135651.png",
-      "PackagePath": "staticwebassets\\img\\patterns\\Screenshot 2024-02-21 135651.png"
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\cable-stitch.jpg",
+      "PackagePath": "staticwebassets\\img\\patterns\\cable-stitch.jpg"
     },
     {
-      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\Screenshot 2024-02-21 141359.png",
-      "PackagePath": "staticwebassets\\img\\patterns\\Screenshot 2024-02-21 141359.png"
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\chevron-stitch.png",
+      "PackagePath": "staticwebassets\\img\\patterns\\chevron-stitch.png"
     },
     {
-      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\Screenshot 2024-02-21 141643.png",
-      "PackagePath": "staticwebassets\\img\\patterns\\Screenshot 2024-02-21 141643.png"
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\granny-square-stitch.png",
+      "PackagePath": "staticwebassets\\img\\patterns\\granny-square-stitch.png"
     },
     {
-      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\Screenshot 2024-02-21 145821.png",
-      "PackagePath": "staticwebassets\\img\\patterns\\Screenshot 2024-02-21 145821.png"
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\mesh-stitch.png",
+      "PackagePath": "staticwebassets\\img\\patterns\\mesh-stitch.png"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\moss-stitch.jpeg",
+      "PackagePath": "staticwebassets\\img\\patterns\\moss-stitch.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\popcorn_stitch.jpeg",
+      "PackagePath": "staticwebassets\\img\\patterns\\popcorn_stitch.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\shell-stitch.png",
+      "PackagePath": "staticwebassets\\img\\patterns\\shell-stitch.png"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\patterns\\treble-stitch.png",
+      "PackagePath": "staticwebassets\\img\\patterns\\treble-stitch.png"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\profile\\image_four.jpeg",
+      "PackagePath": "staticwebassets\\img\\profile\\image_four.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\profile\\image_one.jpg",
+      "PackagePath": "staticwebassets\\img\\profile\\image_one.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\profile\\image_three.png",
+      "PackagePath": "staticwebassets\\img\\profile\\image_three.png"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\profile\\image_two.jpg",
+      "PackagePath": "staticwebassets\\img\\profile\\image_two.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\projects\\amigurumi-bunny.jpeg",
+      "PackagePath": "staticwebassets\\img\\projects\\amigurumi-bunny.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\projects\\baby-socks.jpeg",
+      "PackagePath": "staticwebassets\\img\\projects\\baby-socks.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\projects\\crochet-coaster.jpg",
+      "PackagePath": "staticwebassets\\img\\projects\\crochet-coaster.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\projects\\granny-square-blanket.jpeg",
+      "PackagePath": "staticwebassets\\img\\projects\\granny-square-blanket.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\projects\\knit-bag.jpeg",
+      "PackagePath": "staticwebassets\\img\\projects\\knit-bag.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\projects\\knit-hat.jpeg",
+      "PackagePath": "staticwebassets\\img\\projects\\knit-hat.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\projects\\summer-top.jpeg",
+      "PackagePath": "staticwebassets\\img\\projects\\summer-top.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\img\\projects\\winter-scarf.jpeg",
+      "PackagePath": "staticwebassets\\img\\projects\\winter-scarf.jpeg"
     },
     {
       "Id": "C:\\Users\\ogida\\OneDrive\\Documents\\GitHub\\CroKnitters\\CroKnitters\\CroKnitters\\wwwroot\\js\\site.js",

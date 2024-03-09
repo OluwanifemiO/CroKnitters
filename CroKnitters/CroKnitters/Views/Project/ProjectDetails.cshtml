@@ -1,0 +1,122 @@
+﻿@model ProjectDetailViewModel
+@{
+    ViewData["Title"] = "Project Details";
+}
+
+<div class="container mx-auto">
+
+    <div class="flex flex-wrap justify-center mt-10 items-stretch">
+
+        <div class="text-5xl font-extrabold text-center">
+            <span>
+                Project Details
+            </span>
+        </div>
+
+        <div class=" rounded-lg border text-center shadow-xl m-5 justify-content-start bg-white">
+
+            <!--show Project Details when clicked-->
+            <div class="projectDetail">
+                <!--show the images, name, description, creation date-->
+                <!--images in a row-->
+                @if (Model.ActiveProject.ProjectImages.Count > 0)
+                {
+                    @foreach (var image in Model.Images)
+                    {
+
+                        <div class=" aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                            <img src="@("~/img/projects/"+image)" asp-append-version="true" width="300px" height="300px" alt="Pattern image" class="object-cover object-center group-hover:opacity-75">
+                        </div>
+                    }
+
+                }
+
+                <div class="p-5">
+                    <dl class="row">
+                        <dt class="col-sm-2">
+                            Pattern Name
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.ActiveProject.ProjectName)
+                        </dd>
+
+                        <dt class="col-sm-2">
+                            Creator
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.ActiveProject.Owner.FirstName)
+                            @Html.DisplayFor(model => model.ActiveProject.Owner.LastName)
+                        </dd>
+
+                        @if (Model.ActiveProject.Description != null)
+                        {
+                            <dt class="col-sm-2">
+                                Description
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.ActiveProject.Description)
+                            </dd>
+                        }
+
+
+                        <dt class="col-sm-2">
+                            Date Created
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.ActiveProject.CreationDate)
+                        </dd>
+
+                        @if (Model.ActiveProject.Status != null)
+                        {
+                            <dt class="col-sm-2">
+                                Status
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.ActiveProject.Status)
+                            </dd>
+                        }
+
+                        @if (Model.ActiveProject.ProjectTags != null)
+                        {
+                            @foreach (var tag in Model.TagNames)
+                            {
+                                <dt class="col-sm-2">
+                                    Tags
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @tag
+                                </dd>
+                            }
+                        }
+
+                        <dt class="col-sm-2">
+                            Likes
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.ActiveProject.Likes)
+                        </dd>
+
+                    </dl>
+                </div>
+
+                <!--comments-->
+                <div class="p-2">
+                    <a asp-controller="Project" asp-action="ViewComments" class="w-auto justify-center rounded-md bg-indigo-600 m-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2">See Comments</a>
+                    <a asp-controller="Project" asp-action="Index" class="w-auto justify-center rounded-md bg-indigo-600 m-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2"> See all my Projects</a>
+                    <a asp-controller="Home" asp-action="Index" class="w-auto justify-center rounded-md bg-indigo-600 m-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2"> Back to Home</a>
+                    @if (Context.Request.Cookies["userId"] != null && Model.ActiveProject.OwnerId == Int32.Parse(Context.Request.Cookies["userId"]))
+                    {
+                        <a asp-controller="Project" asp-action="EditProject" asp-route-id="@Model.ActiveProject.ProjectId" class="w-auto justify-center rounded-md bg-indigo-600 m-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2"> Edit Project</a>
+                        <a asp-controller="Project" asp-action="DeleteProject" asp-route-id="@Model.ActiveProject.ProjectId" class="w-auto justify-center rounded-md bg-indigo-600 m-3 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mt-2"> Delete Project</a>
+                    }
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>

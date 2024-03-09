@@ -15,5 +15,5 @@ public class PatternComment
 
     public Pattern Pattern { get; set; } = null!;
 
-    public Admin Admin { get; set; } = null!;
+    //public Admin Admin { get; set; } = null!;
 }

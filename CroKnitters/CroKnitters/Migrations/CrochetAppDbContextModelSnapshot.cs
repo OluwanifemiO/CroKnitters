@@ -97,6 +97,362 @@ namespace CroKnitters.Migrations
                     b.HasIndex("ProvinceId");
 
                     b.ToTable("Cities");
+
+                    b.HasData(
+                        new
+                        {
+                            CityId = 1,
+                            CityName = "Calgary",
+                            ProvinceId = 1
+                        },
+                        new
+                        {
+                            CityId = 2,
+                            CityName = "Edmonton",
+                            ProvinceId = 1
+                        },
+                        new
+                        {
+                            CityId = 3,
+                            CityName = "Red Deer",
+                            ProvinceId = 1
+                        },
+                        new
+                        {
+                            CityId = 4,
+                            CityName = "Vancouver",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 5,
+                            CityName = "Surrey",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 6,
+                            CityName = "Victoria",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 7,
+                            CityName = "Burnaby",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 8,
+                            CityName = "Richmond",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 9,
+                            CityName = "Kelowna",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 10,
+                            CityName = "Abbotsford",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 11,
+                            CityName = "Coquitlam",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 12,
+                            CityName = "Saanich",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 13,
+                            CityName = "White Rock",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 14,
+                            CityName = "Delta",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 15,
+                            CityName = "Nanaimo",
+                            ProvinceId = 2
+                        },
+                        new
+                        {
+                            CityId = 16,
+                            CityName = "Winnipeg",
+                            ProvinceId = 3
+                        },
+                        new
+                        {
+                            CityId = 17,
+                            CityName = "Moncton",
+                            ProvinceId = 4
+                        },
+                        new
+                        {
+                            CityId = 18,
+                            CityName = "St. John's",
+                            ProvinceId = 5
+                        },
+                        new
+                        {
+                            CityId = 19,
+                            CityName = "Halifax",
+                            ProvinceId = 6
+                        },
+                        new
+                        {
+                            CityId = 20,
+                            CityName = "Toronto",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 21,
+                            CityName = "Ottawa",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 22,
+                            CityName = "Hamilton",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 23,
+                            CityName = "Mississauga",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 24,
+                            CityName = "Brampton",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 25,
+                            CityName = "Kitchener",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 26,
+                            CityName = "London",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 27,
+                            CityName = "Markham",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 28,
+                            CityName = "Oshawa",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 29,
+                            CityName = "Vaughan",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 30,
+                            CityName = "Windsor",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 31,
+                            CityName = "St. Catharines",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 32,
+                            CityName = "Oakville",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 33,
+                            CityName = "Richmond Hill",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 34,
+                            CityName = "Burlington",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 35,
+                            CityName = "Sudbury",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 36,
+                            CityName = "Barrie",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 37,
+                            CityName = "Guelph",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 38,
+                            CityName = "Whitby",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 39,
+                            CityName = "Cambridge",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 40,
+                            CityName = "Milton",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 41,
+                            CityName = "Ajax",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 42,
+                            CityName = "Waterloo",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 43,
+                            CityName = "Thunder Bay",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 44,
+                            CityName = "Brantford",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 45,
+                            CityName = "Chatham",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 46,
+                            CityName = "Clarington",
+                            ProvinceId = 7
+                        },
+                        new
+                        {
+                            CityId = 47,
+                            CityName = "Montréal",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 48,
+                            CityName = "Quebec City",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 49,
+                            CityName = "Laval",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 50,
+                            CityName = "Gatineau",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 51,
+                            CityName = "Longueuil",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 52,
+                            CityName = "Sherbrooke",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 53,
+                            CityName = "Lévis",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 54,
+                            CityName = "Saguenay",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 55,
+                            CityName = "Trois-Rivières",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 56,
+                            CityName = "Terrebonne",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 57,
+                            CityName = "Saint-Jérôme",
+                            ProvinceId = 9
+                        },
+                        new
+                        {
+                            CityId = 58,
+                            CityName = "Saskatoon",
+                            ProvinceId = 10
+                        },
+                        new
+                        {
+                            CityId = 59,
+                            CityName = "Regina",
+                            ProvinceId = 10
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Comment", b =>
@@ -106,6 +462,12 @@ namespace CroKnitters.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentId"));
+
+                    b.Property<int>("AdminId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("ApprovalStatus")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -127,9 +489,53 @@ namespace CroKnitters.Migrations
                     b.HasKey("CommentId")
                         .HasName("PK__Comments__C3B4DFCA7D1B4540");
 
+                    b.HasIndex("AdminId");
+
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Comments");
+
+                    b.HasData(
+                        new
+                        {
+                            CommentId = 1,
+                            AdminId = 1,
+                            ApprovalStatus = true,
+                            Content = "Very pretty!",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2632),
+                            Likes = 10,
+                            OwnerId = 1
+                        },
+                        new
+                        {
+                            CommentId = 2,
+                            AdminId = 2,
+                            ApprovalStatus = true,
+                            Content = "Super cute!",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2669),
+                            Likes = 20,
+                            OwnerId = 2
+                        },
+                        new
+                        {
+                            CommentId = 3,
+                            AdminId = 1,
+                            ApprovalStatus = true,
+                            Content = "Love the colors!",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2674),
+                            Likes = 15,
+                            OwnerId = 3
+                        },
+                        new
+                        {
+                            CommentId = 4,
+                            AdminId = 1,
+                            ApprovalStatus = false,
+                            Content = "Shitty job!",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2701),
+                            Likes = 12,
+                            OwnerId = 4
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Event", b =>
@@ -139,6 +545,9 @@ namespace CroKnitters.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EventId"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -161,6 +570,56 @@ namespace CroKnitters.Migrations
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Events");
+
+                    b.HasData(
+                        new
+                        {
+                            EventId = 1,
+                            Date = new DateTime(2024, 5, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2796),
+                            Description = "Don't miss out on amazing deals at our annual yarn sale! From colorful skeins to luxurious blends, we've got something for every project. See you there!",
+                            EventTitle = "Yarn sale at Kitchener, Ontario.",
+                            OwnerId = 1
+                        },
+                        new
+                        {
+                            EventId = 2,
+                            Date = new DateTime(2024, 5, 16, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2837),
+                            Description = "Join us for an inspiring evening as local crafters showcase their latest creations. From intricate afghans to cozy scarves, you'll find plenty of ideas to spark your creativity.",
+                            EventTitle = "Project showcase at Toronto, Ontario",
+                            OwnerId = 2
+                        },
+                        new
+                        {
+                            EventId = 3,
+                            Date = new DateTime(2024, 5, 6, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2843),
+                            Description = "Learn the art of crochet from experienced instructors in a fun and supportive environment. Whether you're a complete beginner or looking to refine your skills, this workshop is perfect for you!",
+                            EventTitle = "Crochet workshop in Vancouver, BC",
+                            OwnerId = 3
+                        },
+                        new
+                        {
+                            EventId = 4,
+                            Date = new DateTime(2024, 3, 1, 12, 30, 0, 0, DateTimeKind.Unspecified),
+                            Description = "Discover the latest trends and techniques in knitting and crochet at our annual expo. From interactive workshops to vendor booths featuring the hottest yarns, you'll find everything you need to take your crafting to the next level.",
+                            EventTitle = "Knitting and Crochet Expo in Montreal, QC",
+                            OwnerId = 4
+                        },
+                        new
+                        {
+                            EventId = 5,
+                            Date = new DateTime(2024, 4, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2854),
+                            Description = "Join us for a virtual crochet class designed for beginners. Learn essential stitches and techniques from the comfort of your own home, with personalized instruction and plenty of support.",
+                            EventTitle = "Online Crochet Class - Beginners Welcome!",
+                            OwnerId = 2
+                        },
+                        new
+                        {
+                            EventId = 6,
+                            Date = new DateTime(2024, 5, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2859),
+                            Description = "Trade your stash and discover new treasures at our yarn swap meet. Bring your unwanted yarn and notions to exchange with fellow crafters, and leave with fresh inspiration for your next project.",
+                            EventTitle = "Local Yarn Swap Meet in Calgary, AB",
+                            OwnerId = 4
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.EventUser", b =>
@@ -185,6 +644,293 @@ namespace CroKnitters.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("EventUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            EventUserId = 1,
+                            EventId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            EventUserId = 2,
+                            EventId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            EventUserId = 3,
+                            EventId = 3,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            EventUserId = 4,
+                            EventId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            EventUserId = 5,
+                            EventId = 5,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            EventUserId = 6,
+                            EventId = 6,
+                            UserId = 2
+                        });
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.FriendsList", b =>
+                {
+                    b.Property<int>("ListId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ListId"));
+
+                    b.Property<int>("FriendId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ListId")
+                        .HasName("PK__FriendsL__E3832805B148DDC9");
+
+                    b.HasIndex("FriendId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("FriendsList", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ListId = 1,
+                            FriendId = 1,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            ListId = 2,
+                            FriendId = 1,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            ListId = 3,
+                            FriendId = 1,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            ListId = 4,
+                            FriendId = 2,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            ListId = 5,
+                            FriendId = 2,
+                            UserId = 4
+                        });
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.Group", b =>
+                {
+                    b.Property<int>("GroupId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GroupId"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<string>("GroupName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("GroupId")
+                        .HasName("PK__Groups__149AF36A0C281B44");
+
+                    b.ToTable("Groups");
+
+                    b.HasData(
+                        new
+                        {
+                            GroupId = 1,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2958),
+                            Description = "Some lazy people coming together to motivate one another.",
+                            GroupName = "Lazy Crocheters community"
+                        },
+                        new
+                        {
+                            GroupId = 2,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3003),
+                            Description = "Weekend warriors unite for crochet projects big and small. All skill levels welcome.",
+                            GroupName = "Weekend Crochet Warriors"
+                        },
+                        new
+                        {
+                            GroupId = 3,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3008),
+                            Description = "A community focused on using eco-friendly and sustainable materials in our crochet and knitting projects.",
+                            GroupName = "Eco-Friendly Fiber Artists"
+                        });
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.GroupChat", b =>
+                {
+                    b.Property<int>("GChatId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("GChatId");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GChatId"));
+
+                    b.Property<int?>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MessageId")
+                        .HasColumnType("int");
+
+                    b.HasKey("GChatId")
+                        .HasName("PK__GroupCha__75C801E807CEC318");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("MessageId");
+
+                    b.ToTable("GroupChat", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            GChatId = 1,
+                            GroupId = 1,
+                            MessageId = 1
+                        },
+                        new
+                        {
+                            GChatId = 2,
+                            GroupId = 1,
+                            MessageId = 2
+                        },
+                        new
+                        {
+                            GChatId = 3,
+                            GroupId = 2,
+                            MessageId = 3
+                        },
+                        new
+                        {
+                            GChatId = 4,
+                            GroupId = 2,
+                            MessageId = 4
+                        },
+                        new
+                        {
+                            GChatId = 5,
+                            GroupId = 3,
+                            MessageId = 5
+                        },
+                        new
+                        {
+                            GChatId = 6,
+                            GroupId = 3,
+                            MessageId = 6
+                        });
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.GroupUser", b =>
+                {
+                    b.Property<int>("GroupUserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GroupUserId"));
+
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(25)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(25)")
+                        .HasDefaultValueSql("('Member')");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("GroupUserId")
+                        .HasName("PK__GroupUse__37F70716E0C22569");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("GroupUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            GroupUserId = 1,
+                            GroupId = 1,
+                            Role = "Admin",
+                            UserId = 2
+                        },
+                        new
+                        {
+                            GroupUserId = 2,
+                            GroupId = 1,
+                            Role = "Member",
+                            UserId = 1
+                        },
+                        new
+                        {
+                            GroupUserId = 3,
+                            GroupId = 2,
+                            Role = "Admin",
+                            UserId = 3
+                        },
+                        new
+                        {
+                            GroupUserId = 4,
+                            GroupId = 2,
+                            Role = "Member",
+                            UserId = 4
+                        },
+                        new
+                        {
+                            GroupUserId = 5,
+                            GroupId = 3,
+                            Role = "Admin",
+                            UserId = 2
+                        },
+                        new
+                        {
+                            GroupUserId = 6,
+                            GroupId = 3,
+                            Role = "Member",
+                            UserId = 4
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Image", b =>
@@ -210,22 +956,92 @@ namespace CroKnitters.Migrations
                         new
                         {
                             ImageId = 1,
-                            ImageSrc = "https://pbs.twimg.com/profile_images/1654080701292068865/AL2TAeY5_400x400.jpg"
+                            ImageSrc = "image_one.jpg"
                         },
                         new
                         {
                             ImageId = 2,
-                            ImageSrc = "https://i.redd.it/jeuusd992wd41.jpg"
+                            ImageSrc = "image_two.jpg"
                         },
                         new
                         {
                             ImageId = 3,
-                            ImageSrc = "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png"
+                            ImageSrc = "image_three.png"
                         },
                         new
                         {
                             ImageId = 4,
-                            ImageSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQV1_mGYXjq3eWha-wQIRkn6ulW9X6Ws-ztw&usqp=CAU"
+                            ImageSrc = "image_four.jpeg"
+                        },
+                        new
+                        {
+                            ImageId = 5,
+                            ImageSrc = "mesh-stitch.png"
+                        },
+                        new
+                        {
+                            ImageId = 6,
+                            ImageSrc = "treble-stitch.png"
+                        },
+                        new
+                        {
+                            ImageId = 7,
+                            ImageSrc = "chevron-stitch.png"
+                        },
+                        new
+                        {
+                            ImageId = 8,
+                            ImageSrc = "granny-square-stitch.png"
+                        },
+                        new
+                        {
+                            ImageId = 9,
+                            ImageSrc = "basketweave-stitch.png"
+                        },
+                        new
+                        {
+                            ImageId = 10,
+                            ImageSrc = "popcorn_stitch.jpeg"
+                        },
+                        new
+                        {
+                            ImageId = 11,
+                            ImageSrc = "baby-socks.jpeg"
+                        },
+                        new
+                        {
+                            ImageId = 12,
+                            ImageSrc = "winter-scarf.jpeg"
+                        },
+                        new
+                        {
+                            ImageId = 13,
+                            ImageSrc = "granny-square-blanket.jpeg"
+                        },
+                        new
+                        {
+                            ImageId = 14,
+                            ImageSrc = "amigurumi-bunny.jpeg"
+                        },
+                        new
+                        {
+                            ImageId = 15,
+                            ImageSrc = "summer-top.jpeg"
+                        },
+                        new
+                        {
+                            ImageId = 16,
+                            ImageSrc = "crochet-coaster.jpg"
+                        },
+                        new
+                        {
+                            ImageId = 17,
+                            ImageSrc = "cable-stitch.jpg"
+                        },
+                        new
+                        {
+                            ImageId = 18,
+                            ImageSrc = "shell-stitch.png"
                         });
                 });
 
@@ -247,6 +1063,134 @@ namespace CroKnitters.Migrations
                         .HasName("PK__Language__B93855ABA45758AD");
 
                     b.ToTable("Languages");
+
+                    b.HasData(
+                        new
+                        {
+                            LanguageId = 1,
+                            LanguageName = "English"
+                        },
+                        new
+                        {
+                            LanguageId = 2,
+                            LanguageName = "French"
+                        });
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.Message", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MessageId"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .IsUnicode(false)
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MessageId")
+                        .HasName("PK__Messages__C87C0C9C167A84C6");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Messages");
+
+                    b.HasData(
+                        new
+                        {
+                            MessageId = 1,
+                            Content = "Hey everyone! Excited to join this group.",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3136),
+                            SenderId = 1
+                        },
+                        new
+                        {
+                            MessageId = 2,
+                            Content = "Welcome! Looking forward to seeing your projects.",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3160),
+                            SenderId = 2
+                        },
+                        new
+                        {
+                            MessageId = 3,
+                            Content = "Does anyone have tips for a beginner?",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3163),
+                            SenderId = 3
+                        },
+                        new
+                        {
+                            MessageId = 4,
+                            Content = "Sure! I'd recommend starting with simple patterns and bulky yarn. It's easier to see your stitches.",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3169),
+                            SenderId = 4
+                        },
+                        new
+                        {
+                            MessageId = 5,
+                            Content = "I'm trying to find eco-friendly yarn. Any brand recommendations?",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3173),
+                            SenderId = 2
+                        },
+                        new
+                        {
+                            MessageId = 6,
+                            Content = "I love using bamboo and recycled cotton yarns. They're great for the environment and work well for many projects.",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3176),
+                            SenderId = 4
+                        },
+                        new
+                        {
+                            MessageId = 7,
+                            Content = "Hey! How's it going?",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3180),
+                            SenderId = 1
+                        },
+                        new
+                        {
+                            MessageId = 8,
+                            Content = "Hi there! Not bad, just working on a new project. How about you?",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3183),
+                            SenderId = 2
+                        },
+                        new
+                        {
+                            MessageId = 9,
+                            Content = "Hey! What kind of project are you working on?",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3186),
+                            SenderId = 1
+                        },
+                        new
+                        {
+                            MessageId = 10,
+                            Content = "I'm trying out a new crochet pattern for a scarf. It's a bit challenging, but fun!",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3190),
+                            SenderId = 3
+                        },
+                        new
+                        {
+                            MessageId = 11,
+                            Content = "Hello! Do you have a favorite type of yarn you like to use?",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3193),
+                            SenderId = 1
+                        },
+                        new
+                        {
+                            MessageId = 12,
+                            Content = "I love using soft merino wool for scarves. It gives a cozy feel. How about you?",
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3196),
+                            SenderId = 4
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Pattern", b =>
@@ -257,15 +1201,13 @@ namespace CroKnitters.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PatternId"));
 
-                    b.Property<int>("AdminId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("date")
                         .HasDefaultValueSql("(getdate())");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .IsUnicode(false)
                         .HasColumnType("varchar(500)");
@@ -296,13 +1238,101 @@ namespace CroKnitters.Migrations
                     b.HasKey("PatternId")
                         .HasName("PK__Patterns__0A631B521FCBD794");
 
-                    b.HasIndex("AdminId");
-
                     b.HasIndex("ImageId");
 
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Patterns");
+
+                    b.HasData(
+                        new
+                        {
+                            PatternId = 1,
+                            CreationDate = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This pattern usually consists of single chains connected to one another in the middle to resemble a mesh design.",
+                            Likes = 50,
+                            OwnerId = 1,
+                            PatternName = "Mesh Pattern",
+                            StitchCount = 30,
+                            StitchType = "Mesh Stitch"
+                        },
+                        new
+                        {
+                            PatternId = 2,
+                            CreationDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This pattern consists of treble crochet stitches.",
+                            Likes = 20,
+                            OwnerId = 2,
+                            PatternName = "Treble Crochet Pattern",
+                            StitchCount = 20,
+                            StitchType = "Treble Crochet Stitch"
+                        },
+                        new
+                        {
+                            PatternId = 3,
+                            CreationDate = new DateTime(2024, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This pattern usually consists of double crochet stitches connected to one to resemble a wave design.",
+                            Likes = 80,
+                            OwnerId = 2,
+                            PatternName = "Chevron Pattern",
+                            StitchCount = 70,
+                            StitchType = "Double Crochet Stitch"
+                        },
+                        new
+                        {
+                            PatternId = 4,
+                            CreationDate = new DateTime(2024, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This pattern usually consists of Double crochet stitches that are connected in a unique way.",
+                            Likes = 100,
+                            OwnerId = 3,
+                            PatternName = "Granny Square Pattern",
+                            StitchCount = 100,
+                            StitchType = "Double Crochet Stitch"
+                        },
+                        new
+                        {
+                            PatternId = 5,
+                            CreationDate = new DateTime(2024, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This pattern creates a woven texture resembling a basket.",
+                            Likes = 45,
+                            OwnerId = 1,
+                            PatternName = "Basketweave Pattern",
+                            StitchCount = 25,
+                            StitchType = "Basketweave Stitch"
+                        },
+                        new
+                        {
+                            PatternId = 6,
+                            CreationDate = new DateTime(2024, 2, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This pattern features the popcorn stitch for a textured and raised effect.",
+                            Likes = 30,
+                            OwnerId = 3,
+                            PatternName = "Popcorn Stitch Pattern",
+                            StitchCount = 15,
+                            StitchType = "Popcorn Stitch"
+                        },
+                        new
+                        {
+                            PatternId = 7,
+                            CreationDate = new DateTime(2024, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This pattern creates a twisted and braided appearance using cable stitches.",
+                            Likes = 60,
+                            OwnerId = 1,
+                            PatternName = "Cable Stitch Pattern",
+                            StitchCount = 40,
+                            StitchType = "Cable Stitch"
+                        },
+                        new
+                        {
+                            PatternId = 8,
+                            CreationDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This pattern forms a scallop-like shell using various crochet stitches.",
+                            Likes = 75,
+                            OwnerId = 2,
+                            PatternName = "Shell Stitch Pattern",
+                            StitchCount = 50,
+                            StitchType = "Shell Stitch"
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.PatternComment", b =>
@@ -313,9 +1343,6 @@ namespace CroKnitters.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PatComId"));
 
-                    b.Property<int>("AdminId")
-                        .HasColumnType("int");
-
                     b.Property<int>("CommentId")
                         .HasColumnType("int");
 
@@ -325,13 +1352,123 @@ namespace CroKnitters.Migrations
                     b.HasKey("PatComId")
                         .HasName("PK__PatternC__272DE03846EEF9E6");
 
-                    b.HasIndex("AdminId");
-
                     b.HasIndex("CommentId");
 
                     b.HasIndex("PatternId");
 
                     b.ToTable("PatternComments");
+
+                    b.HasData(
+                        new
+                        {
+                            PatComId = 1,
+                            CommentId = 2,
+                            PatternId = 1
+                        },
+                        new
+                        {
+                            PatComId = 2,
+                            CommentId = 1,
+                            PatternId = 1
+                        },
+                        new
+                        {
+                            PatComId = 3,
+                            CommentId = 3,
+                            PatternId = 2
+                        },
+                        new
+                        {
+                            PatComId = 4,
+                            CommentId = 4,
+                            PatternId = 2
+                        },
+                        new
+                        {
+                            PatComId = 5,
+                            CommentId = 2,
+                            PatternId = 3
+                        },
+                        new
+                        {
+                            PatComId = 6,
+                            CommentId = 4,
+                            PatternId = 3
+                        });
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.PatternImage", b =>
+                {
+                    b.Property<int>("PatImId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PatImId"));
+
+                    b.Property<int>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PatternId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PatImId")
+                        .HasName("PK__PatternI__469D527DA79D41C7");
+
+                    b.HasIndex("ImageId");
+
+                    b.HasIndex("PatternId");
+
+                    b.ToTable("PatternImage");
+
+                    b.HasData(
+                        new
+                        {
+                            PatImId = 1,
+                            ImageId = 5,
+                            PatternId = 1
+                        },
+                        new
+                        {
+                            PatImId = 2,
+                            ImageId = 6,
+                            PatternId = 2
+                        },
+                        new
+                        {
+                            PatImId = 3,
+                            ImageId = 7,
+                            PatternId = 3
+                        },
+                        new
+                        {
+                            PatImId = 4,
+                            ImageId = 8,
+                            PatternId = 4
+                        },
+                        new
+                        {
+                            PatImId = 5,
+                            ImageId = 9,
+                            PatternId = 5
+                        },
+                        new
+                        {
+                            PatImId = 6,
+                            ImageId = 10,
+                            PatternId = 6
+                        },
+                        new
+                        {
+                            PatImId = 7,
+                            ImageId = 17,
+                            PatternId = 7
+                        },
+                        new
+                        {
+                            PatImId = 8,
+                            ImageId = 18,
+                            PatternId = 8
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.PatternTag", b =>
@@ -356,6 +1493,56 @@ namespace CroKnitters.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("PatternTags");
+
+                    b.HasData(
+                        new
+                        {
+                            PatTagId = 1,
+                            PatternId = 1,
+                            TagId = 1
+                        },
+                        new
+                        {
+                            PatTagId = 2,
+                            PatternId = 2,
+                            TagId = 2
+                        },
+                        new
+                        {
+                            PatTagId = 3,
+                            PatternId = 3,
+                            TagId = 3
+                        },
+                        new
+                        {
+                            PatTagId = 4,
+                            PatternId = 4,
+                            TagId = 4
+                        },
+                        new
+                        {
+                            PatTagId = 5,
+                            PatternId = 5,
+                            TagId = 5
+                        },
+                        new
+                        {
+                            PatTagId = 6,
+                            PatternId = 6,
+                            TagId = 6
+                        },
+                        new
+                        {
+                            PatTagId = 7,
+                            PatternId = 7,
+                            TagId = 7
+                        },
+                        new
+                        {
+                            PatTagId = 8,
+                            PatternId = 8,
+                            TagId = 8
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Preference", b =>
@@ -385,6 +1572,107 @@ namespace CroKnitters.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Preferences");
+
+                    b.HasData(
+                        new
+                        {
+                            PreferenceId = 1,
+                            LanguageId = 1,
+                            ThemeId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            PreferenceId = 2,
+                            LanguageId = 2,
+                            ThemeId = 2,
+                            UserId = 2
+                        });
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.PrivateChat", b =>
+                {
+                    b.Property<int>("PChatId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("PChatId");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PChatId"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<int>("MessageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecieverId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PChatId")
+                        .HasName("PK__PrivateC__752CDBDC8FE2125C");
+
+                    b.HasIndex("MessageId");
+
+                    b.HasIndex("RecieverId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("PrivateChat", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            PChatId = 1,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3623),
+                            MessageId = 7,
+                            RecieverId = 2,
+                            SenderId = 1
+                        },
+                        new
+                        {
+                            PChatId = 2,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3720),
+                            MessageId = 8,
+                            RecieverId = 1,
+                            SenderId = 2
+                        },
+                        new
+                        {
+                            PChatId = 3,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3726),
+                            MessageId = 9,
+                            RecieverId = 3,
+                            SenderId = 1
+                        },
+                        new
+                        {
+                            PChatId = 4,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3730),
+                            MessageId = 10,
+                            RecieverId = 1,
+                            SenderId = 3
+                        },
+                        new
+                        {
+                            PChatId = 5,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3734),
+                            MessageId = 11,
+                            RecieverId = 4,
+                            SenderId = 1
+                        },
+                        new
+                        {
+                            PChatId = 6,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(3738),
+                            MessageId = 12,
+                            RecieverId = 1,
+                            SenderId = 4
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Project", b =>
@@ -394,9 +1682,6 @@ namespace CroKnitters.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProjectId"));
-
-                    b.Property<int>("AdminId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
@@ -414,7 +1699,8 @@ namespace CroKnitters.Migrations
                     b.Property<int>("Likes")
                         .HasColumnType("int");
 
-                    b.Property<int>("OwnerId")
+                    b.Property<int?>("OwnerId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("ProjectName")
@@ -433,13 +1719,73 @@ namespace CroKnitters.Migrations
                     b.HasKey("ProjectId")
                         .HasName("PK__Projects__761ABEF001154132");
 
-                    b.HasIndex("AdminId");
-
                     b.HasIndex("ImageId");
 
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Projects");
+
+                    b.HasData(
+                        new
+                        {
+                            ProjectId = 1,
+                            CreationDate = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Description = "This is a work in progress socks for my six month old baby.",
+                            Likes = 50,
+                            OwnerId = 1,
+                            ProjectName = "Baby Socks",
+                            Status = "In-Progress"
+                        },
+                        new
+                        {
+                            ProjectId = 2,
+                            CreationDate = new DateTime(2024, 2, 26, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2012),
+                            Description = "A warm scarf for the winter season, using a bobble stitch pattern.",
+                            Likes = 75,
+                            OwnerId = 2,
+                            ProjectName = "Winter Scarf",
+                            Status = "Completed"
+                        },
+                        new
+                        {
+                            ProjectId = 3,
+                            CreationDate = new DateTime(2024, 2, 16, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2399),
+                            Description = "A colorful blanket made from granny squares. Each square features a different color, aiming for a vibrant look.",
+                            Likes = 90,
+                            OwnerId = 3,
+                            ProjectName = "Granny Square Blanket",
+                            Status = "In-Progress"
+                        },
+                        new
+                        {
+                            ProjectId = 4,
+                            CreationDate = new DateTime(2024, 3, 2, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2405),
+                            Description = "A cute bunny amigurumi project for the upcoming Easter holidays.",
+                            Likes = 120,
+                            OwnerId = 1,
+                            ProjectName = "Amigurumi Bunny",
+                            Status = "Completed"
+                        },
+                        new
+                        {
+                            ProjectId = 5,
+                            CreationDate = new DateTime(2024, 2, 6, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2411),
+                            Description = "A light and breezy top perfect for summer, using cotton yarn.",
+                            Likes = 65,
+                            OwnerId = 2,
+                            ProjectName = "Summer Top",
+                            Status = "In-Progress"
+                        },
+                        new
+                        {
+                            ProjectId = 6,
+                            CreationDate = new DateTime(2024, 2, 21, 13, 14, 19, 912, DateTimeKind.Local).AddTicks(2417),
+                            Description = "Set of coasters for the dining table, featuring a floral motif.",
+                            Likes = 40,
+                            OwnerId = 3,
+                            ProjectName = "Crochet Coasters",
+                            Status = "Completed"
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.ProjectComment", b =>
@@ -450,9 +1796,6 @@ namespace CroKnitters.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProComId"));
 
-                    b.Property<int>("AdminId")
-                        .HasColumnType("int");
-
                     b.Property<int>("CommentId")
                         .HasColumnType("int");
 
@@ -462,13 +1805,111 @@ namespace CroKnitters.Migrations
                     b.HasKey("ProComId")
                         .HasName("PK__ProjectC__FAF8CB4AAB204E27");
 
-                    b.HasIndex("AdminId");
-
                     b.HasIndex("CommentId");
 
                     b.HasIndex("ProjectId");
 
                     b.ToTable("ProjectComments");
+
+                    b.HasData(
+                        new
+                        {
+                            ProComId = 1,
+                            CommentId = 2,
+                            ProjectId = 1
+                        },
+                        new
+                        {
+                            ProComId = 2,
+                            CommentId = 1,
+                            ProjectId = 1
+                        },
+                        new
+                        {
+                            ProComId = 3,
+                            CommentId = 3,
+                            ProjectId = 2
+                        },
+                        new
+                        {
+                            ProComId = 4,
+                            CommentId = 4,
+                            ProjectId = 2
+                        },
+                        new
+                        {
+                            ProComId = 5,
+                            CommentId = 2,
+                            ProjectId = 3
+                        },
+                        new
+                        {
+                            ProComId = 6,
+                            CommentId = 4,
+                            ProjectId = 3
+                        });
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.ProjectImage", b =>
+                {
+                    b.Property<int>("ProImId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProImId"));
+
+                    b.Property<int>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProImId")
+                        .HasName("PK__ProjectI__05A6BB15FBD6324F");
+
+                    b.HasIndex("ImageId");
+
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("ProjectImages");
+
+                    b.HasData(
+                        new
+                        {
+                            ProImId = 1,
+                            ImageId = 11,
+                            ProjectId = 1
+                        },
+                        new
+                        {
+                            ProImId = 2,
+                            ImageId = 12,
+                            ProjectId = 2
+                        },
+                        new
+                        {
+                            ProImId = 3,
+                            ImageId = 13,
+                            ProjectId = 3
+                        },
+                        new
+                        {
+                            ProImId = 4,
+                            ImageId = 14,
+                            ProjectId = 4
+                        },
+                        new
+                        {
+                            ProImId = 5,
+                            ImageId = 15,
+                            ProjectId = 5
+                        },
+                        new
+                        {
+                            ProImId = 6,
+                            ImageId = 16,
+                            ProjectId = 6
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.ProjectPattern", b =>
@@ -517,6 +1958,44 @@ namespace CroKnitters.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("ProjectTags");
+
+                    b.HasData(
+                        new
+                        {
+                            ProTagId = 1,
+                            ProjectId = 1,
+                            TagId = 8
+                        },
+                        new
+                        {
+                            ProTagId = 2,
+                            ProjectId = 2,
+                            TagId = 7
+                        },
+                        new
+                        {
+                            ProTagId = 3,
+                            ProjectId = 3,
+                            TagId = 6
+                        },
+                        new
+                        {
+                            ProTagId = 4,
+                            ProjectId = 4,
+                            TagId = 5
+                        },
+                        new
+                        {
+                            ProTagId = 5,
+                            ProjectId = 5,
+                            TagId = 4
+                        },
+                        new
+                        {
+                            ProTagId = 6,
+                            ProjectId = 6,
+                            TagId = 3
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Province", b =>
@@ -609,6 +2088,48 @@ namespace CroKnitters.Migrations
                         .HasName("PK__Tags__657CF9ACB4394FA8");
 
                     b.ToTable("Tags");
+
+                    b.HasData(
+                        new
+                        {
+                            TagId = 1,
+                            TagName = "Amazing"
+                        },
+                        new
+                        {
+                            TagId = 2,
+                            TagName = "Cute"
+                        },
+                        new
+                        {
+                            TagId = 3,
+                            TagName = "Elegant"
+                        },
+                        new
+                        {
+                            TagId = 4,
+                            TagName = "Classic"
+                        },
+                        new
+                        {
+                            TagId = 5,
+                            TagName = "Modern"
+                        },
+                        new
+                        {
+                            TagId = 6,
+                            TagName = "Colorful"
+                        },
+                        new
+                        {
+                            TagId = 7,
+                            TagName = "Simple"
+                        },
+                        new
+                        {
+                            TagId = 8,
+                            TagName = "Unique"
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.Theme", b =>
@@ -629,6 +2150,18 @@ namespace CroKnitters.Migrations
                         .HasName("PK__Themes__FBB3E4D98AE98BB3");
 
                     b.ToTable("Themes");
+
+                    b.HasData(
+                        new
+                        {
+                            ThemeId = 1,
+                            ThemeTitle = "Light"
+                        },
+                        new
+                        {
+                            ThemeId = 2,
+                            ThemeTitle = "Dark"
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.User", b =>
@@ -686,6 +2219,9 @@ namespace CroKnitters.Migrations
                     b.HasIndex("CityId");
 
                     b.HasIndex("ImageId");
+
+                    b.HasIndex("Username")
+                        .IsUnique();
 
                     b.ToTable("Users");
 
@@ -758,6 +2294,56 @@ namespace CroKnitters.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserPatterns");
+
+                    b.HasData(
+                        new
+                        {
+                            UpatId = 1,
+                            PatternId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            UpatId = 2,
+                            PatternId = 2,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            UpatId = 3,
+                            PatternId = 3,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            UpatId = 4,
+                            PatternId = 4,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            UpatId = 5,
+                            PatternId = 5,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            UpatId = 6,
+                            PatternId = 6,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            UpatId = 7,
+                            PatternId = 7,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            UpatId = 8,
+                            PatternId = 8,
+                            UserId = 4
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.UserProject", b =>
@@ -782,6 +2368,44 @@ namespace CroKnitters.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserProjects");
+
+                    b.HasData(
+                        new
+                        {
+                            UproId = 1,
+                            ProjectId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            UproId = 2,
+                            ProjectId = 2,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            UproId = 3,
+                            ProjectId = 3,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            UproId = 4,
+                            ProjectId = 4,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            UproId = 5,
+                            ProjectId = 5,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            UproId = 6,
+                            ProjectId = 6,
+                            UserId = 3
+                        });
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.City", b =>
@@ -796,11 +2420,19 @@ namespace CroKnitters.Migrations
 
             modelBuilder.Entity("CroKnitters.Entities.Comment", b =>
                 {
+                    b.HasOne("CroKnitters.Entities.Admin", "Admin")
+                        .WithMany()
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("CroKnitters.Entities.User", "Owner")
                         .WithMany("Comments")
                         .HasForeignKey("OwnerId")
                         .IsRequired()
                         .HasConstraintName("FK__Comments__OwnerI__4AB81AF0");
+
+                    b.Navigation("Admin");
 
                     b.Navigation("Owner");
                 });
@@ -835,18 +2467,77 @@ namespace CroKnitters.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.FriendsList", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.User", "Friend")
+                        .WithMany("FriendsListFriends")
+                        .HasForeignKey("FriendId")
+                        .IsRequired()
+                        .HasConstraintName("FK__FriendsLi__Frien__3B40CD36");
+
+                    b.HasOne("CroKnitters.Entities.User", "User")
+                        .WithMany("FriendsListUsers")
+                        .HasForeignKey("UserId")
+                        .IsRequired()
+                        .HasConstraintName("FK__FriendsLi__UserI__3A4CA8FD");
+
+                    b.Navigation("Friend");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.GroupChat", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Group", "Group")
+                        .WithMany("GroupChats")
+                        .HasForeignKey("GroupId")
+                        .HasConstraintName("FK__GroupChat__Group__31B762FC");
+
+                    b.HasOne("CroKnitters.Entities.Message", "Message")
+                        .WithMany("GroupChats")
+                        .HasForeignKey("MessageId")
+                        .HasConstraintName("FK__GroupChat__Messa__30C33EC3");
+
+                    b.Navigation("Group");
+
+                    b.Navigation("Message");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.GroupUser", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Group", "Group")
+                        .WithMany("GroupUsers")
+                        .HasForeignKey("GroupId")
+                        .IsRequired()
+                        .HasConstraintName("FK__GroupUser__Group__40058253");
+
+                    b.HasOne("CroKnitters.Entities.User", "User")
+                        .WithMany("GroupUsers")
+                        .HasForeignKey("UserId")
+                        .IsRequired()
+                        .HasConstraintName("FK__GroupUser__UserI__3E1D39E1");
+
+                    b.Navigation("Group");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.Message", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.User", "Sender")
+                        .WithMany("Messages")
+                        .HasForeignKey("SenderId")
+                        .IsRequired()
+                        .HasConstraintName("FK__Messages__Sender__2CF2ADDF");
+
+                    b.Navigation("Sender");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Pattern", b =>
                 {
-                    b.HasOne("CroKnitters.Entities.Admin", "Admin")
-                        .WithMany()
-                        .HasForeignKey("AdminId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CroKnitters.Entities.Image", "Image")
+                    b.HasOne("CroKnitters.Entities.Image", null)
                         .WithMany("Patterns")
-                        .HasForeignKey("ImageId")
-                        .HasConstraintName("FK__Patterns__ImageI__3F466844");
+                        .HasForeignKey("ImageId");
 
                     b.HasOne("CroKnitters.Entities.User", "Owner")
                         .WithMany("Patterns")
@@ -854,21 +2545,11 @@ namespace CroKnitters.Migrations
                         .IsRequired()
                         .HasConstraintName("FK__Patterns__OwnerI__3E52440B");
 
-                    b.Navigation("Admin");
-
-                    b.Navigation("Image");
-
                     b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.PatternComment", b =>
                 {
-                    b.HasOne("CroKnitters.Entities.Admin", "Admin")
-                        .WithMany()
-                        .HasForeignKey("AdminId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("CroKnitters.Entities.Comment", "Comment")
                         .WithMany("PatternComments")
                         .HasForeignKey("CommentId")
@@ -881,9 +2562,26 @@ namespace CroKnitters.Migrations
                         .IsRequired()
                         .HasConstraintName("FK__PatternCo__Patte__6477ECF3");
 
-                    b.Navigation("Admin");
-
                     b.Navigation("Comment");
+
+                    b.Navigation("Pattern");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.PatternImage", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Image", "Image")
+                        .WithMany("PatternImages")
+                        .HasForeignKey("ImageId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PatternIm__Image__236943A5");
+
+                    b.HasOne("CroKnitters.Entities.Pattern", "Pattern")
+                        .WithMany("PatternImages")
+                        .HasForeignKey("PatternId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PatternIm__Patte__22751F6C");
+
+                    b.Navigation("Image");
 
                     b.Navigation("Pattern");
                 });
@@ -934,18 +2632,38 @@ namespace CroKnitters.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.PrivateChat", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Message", "Message")
+                        .WithMany("PrivateChats")
+                        .HasForeignKey("MessageId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PrivateCh__Messa__367C1819");
+
+                    b.HasOne("CroKnitters.Entities.User", "Reciever")
+                        .WithMany("PrivateChatRecievers")
+                        .HasForeignKey("RecieverId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PrivateCh__Recie__3587F3E0");
+
+                    b.HasOne("CroKnitters.Entities.User", "Sender")
+                        .WithMany("PrivateChatSenders")
+                        .HasForeignKey("SenderId")
+                        .IsRequired()
+                        .HasConstraintName("FK__PrivateCh__Sende__3493CFA7");
+
+                    b.Navigation("Message");
+
+                    b.Navigation("Reciever");
+
+                    b.Navigation("Sender");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Project", b =>
                 {
-                    b.HasOne("CroKnitters.Entities.Admin", "Admin")
-                        .WithMany()
-                        .HasForeignKey("AdminId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CroKnitters.Entities.Image", "Image")
+                    b.HasOne("CroKnitters.Entities.Image", null)
                         .WithMany("Projects")
-                        .HasForeignKey("ImageId")
-                        .HasConstraintName("FK__Projects__ImageI__45F365D3");
+                        .HasForeignKey("ImageId");
 
                     b.HasOne("CroKnitters.Entities.User", "Owner")
                         .WithMany("Projects")
@@ -953,21 +2671,11 @@ namespace CroKnitters.Migrations
                         .IsRequired()
                         .HasConstraintName("FK__Projects__OwnerI__44FF419A");
 
-                    b.Navigation("Admin");
-
-                    b.Navigation("Image");
-
                     b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("CroKnitters.Entities.ProjectComment", b =>
                 {
-                    b.HasOne("CroKnitters.Entities.Admin", "Admin")
-                        .WithMany()
-                        .HasForeignKey("AdminId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("CroKnitters.Entities.Comment", "Comment")
                         .WithMany("ProjectComments")
                         .HasForeignKey("CommentId")
@@ -980,9 +2688,26 @@ namespace CroKnitters.Migrations
                         .IsRequired()
                         .HasConstraintName("FK__ProjectCo__Proje__60A75C0F");
 
-                    b.Navigation("Admin");
-
                     b.Navigation("Comment");
+
+                    b.Navigation("Project");
+                });
+
+            modelBuilder.Entity("CroKnitters.Entities.ProjectImage", b =>
+                {
+                    b.HasOne("CroKnitters.Entities.Image", "Image")
+                        .WithMany("ProjectImages")
+                        .HasForeignKey("ImageId")
+                        .IsRequired()
+                        .HasConstraintName("FK__ProjectIm__Image__1F98B2C1");
+
+                    b.HasOne("CroKnitters.Entities.Project", "Project")
+                        .WithMany("ProjectImages")
+                        .HasForeignKey("ProjectId")
+                        .IsRequired()
+                        .HasConstraintName("FK__ProjectIm__Proje__1EA48E88");
+
+                    b.Navigation("Image");
 
                     b.Navigation("Project");
                 });
@@ -1097,9 +2822,20 @@ namespace CroKnitters.Migrations
                     b.Navigation("EventUsers");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.Group", b =>
+                {
+                    b.Navigation("GroupChats");
+
+                    b.Navigation("GroupUsers");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Image", b =>
                 {
+                    b.Navigation("PatternImages");
+
                     b.Navigation("Patterns");
+
+                    b.Navigation("ProjectImages");
 
                     b.Navigation("Projects");
 
@@ -1111,9 +2847,18 @@ namespace CroKnitters.Migrations
                     b.Navigation("Preferences");
                 });
 
+            modelBuilder.Entity("CroKnitters.Entities.Message", b =>
+                {
+                    b.Navigation("GroupChats");
+
+                    b.Navigation("PrivateChats");
+                });
+
             modelBuilder.Entity("CroKnitters.Entities.Pattern", b =>
                 {
                     b.Navigation("PatternComments");
+
+                    b.Navigation("PatternImages");
 
                     b.Navigation("PatternTags");
 
@@ -1125,6 +2870,8 @@ namespace CroKnitters.Migrations
             modelBuilder.Entity("CroKnitters.Entities.Project", b =>
                 {
                     b.Navigation("ProjectComments");
+
+                    b.Navigation("ProjectImages");
 
                     b.Navigation("ProjectPatterns");
 
@@ -1158,9 +2905,21 @@ namespace CroKnitters.Migrations
 
                     b.Navigation("Events");
 
+                    b.Navigation("FriendsListFriends");
+
+                    b.Navigation("FriendsListUsers");
+
+                    b.Navigation("GroupUsers");
+
+                    b.Navigation("Messages");
+
                     b.Navigation("Patterns");
 
                     b.Navigation("Preferences");
+
+                    b.Navigation("PrivateChatRecievers");
+
+                    b.Navigation("PrivateChatSenders");
 
                     b.Navigation("Projects");
 
